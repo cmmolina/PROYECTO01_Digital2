@@ -39,7 +39,7 @@
 [v _isr isr `II(v  1 e 1 0 ]
 "119
 [v _main main `(v  1 e 1 0 ]
-"151
+"167
 [v _setup setup `(v  1 e 1 0 ]
 "60 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc/pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -144,7 +144,7 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3450
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S295 . 1 `uc 1 RD0 1 0 :1:0 
+[s S296 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -154,13 +154,13 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "370 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
-[u S304 . 1 `S295 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES304  1 e 1 @8 ]
+[u S305 . 1 `S296 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES305  1 e 1 @8 ]
 "844
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "851
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S355 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S356 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -170,11 +170,11 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1558
-[u S364 . 1 `S355 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES364  1 e 1 @135 ]
+[u S365 . 1 `S356 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES365  1 e 1 @135 ]
 "1980
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S376 . 1 `uc 1 SEN 1 0 :1:0 
+[s S377 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -184,8 +184,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1997
-[u S385 . 1 `S376 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES385  1 e 1 @145 ]
+[u S386 . 1 `S377 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES386  1 e 1 @145 ]
 "2049
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2178
@@ -214,15 +214,17 @@
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "51 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
 [v _proximidad proximidad `ui  1 e 2 0 ]
+"52
+[v _espacios espacios `ui  1 e 2 0 ]
 "119
 [v _main main `(v  1 e 1 0 ]
 {
-"145
+"161
 } 0
-"151
+"167
 [v _setup setup `(v  1 e 1 0 ]
 {
-"192
+"208
 } 0
 "13 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]

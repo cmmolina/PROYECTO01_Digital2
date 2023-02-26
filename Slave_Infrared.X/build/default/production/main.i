@@ -24,6 +24,7 @@
 #pragma config WRT = OFF
 
 
+
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2641,10 +2642,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 29 "main.c" 2
+# 30 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 30 "main.c" 2
+# 31 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2743,29 +2744,8 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 31 "main.c" 2
+# 32 "main.c" 2
 
-
-# 1 "./LCD.h" 1
-# 47 "./LCD.h"
-void Lcd_Port(char a);
-
-void Lcd_Cmd(char a);
-
-void Lcd_Clear(void);
-
-void Lcd_Set_Cursor(char a, char b);
-
-void Lcd_Init(void);
-
-void Lcd_Write_Char(char a);
-
-void Lcd_Write_String(char *a);
-
-void Lcd_Shift_Right(void);
-
-void Lcd_Shift_Left(void);
-# 33 "main.c" 2
 
 # 1 "./IIC.h" 1
 # 17 "./IIC.h"
@@ -2809,34 +2789,26 @@ int I2C_Master_Read(unsigned short a);
 
 void I2C_Slave_Init(uint8_t address);
 # 34 "main.c" 2
-# 51 "main.c"
-unsigned int proximidad = 1;
-unsigned int espacios;
-
-float VOLTAJE1;
-float voltaje1;
-
-unsigned int cont = 0;
-unsigned int horas = 0;
-unsigned int temporal = 0;
 
 
-char tens;
-char ones;
 
-char ADC1[4];
-char HORA[] = "000000";
-char FECHA[] = "230923";
 
-uint8_t sec, min, hora;
-uint8_t day, month, year;
+
+
+int lots;
+int number1 = 1;
+int number2 = 1;
+int number3 = 1;
+unsigned int contador;
+
+uint8_t z;
+
 
 
 
 
 void setup(void);
-unsigned int map(uint8_t value, int inputmin, int inputmax, int outmin, int outmax);
-
+void LotReading(void);
 
 
 
@@ -2845,33 +2817,40 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 
     if (PIR1bits.SSPIF){
+
+        SSPCONbits.CKP = 0;
+
+        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+            z = SSPBUF;
+            SSPCONbits.SSPOV = 0;
+            SSPCONbits.WCOL = 0;
+            SSPCONbits.CKP = 1;
+        }
+
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+            z = SSPBUF;
+            PIR1bits.SSPIF = 0;
+            SSPCONbits.CKP = 1;
+            while(!SSPSTATbits.BF);
+            PORTD = SSPBUF;
+            _delay((unsigned long)((250)*(1000000/4000000.0)));
+
+        }
+
+        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            z = SSPBUF;
+            SSPSTATbits.BF = 0;
+            LotReading();
+            SSPBUF = lots;
+            SSPCONbits.CKP = 1;
+            _delay((unsigned long)((250)*(1000000/4000000.0)));
+            while(SSPSTATbits.BF);
+        }
         PIR1bits.SSPIF = 0;
     }
 
-
-    if (PIR1bits.TXIF){
-        PIR1bits.TXIF = 0;
-    }
-
-
-    if (PIR1bits.RCIF){
-        PIR1bits.RCIF = 0;
-    }
-
-
-    if (PIR1bits.ADIF){
-        PIR1bits.ADIF = 0;
-    }
-
-
-    if (INTCONbits.T0IF){
-        TMR0 = 179;
-        INTCONbits.T0IF = 0;
-    }
-
-
     if (INTCONbits.RBIF){
-        ;
+        INTCONbits.RBIF = 0;
     }
 }
 
@@ -2880,44 +2859,11 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 void main(void) {
     setup();
-    Lcd_Init();
-    Lcd_Clear();
+    contador = PORTB;
+    lots = 3;
 
     while(1){
-
-        I2C_Master_Start();
-        I2C_Master_Write(0x51);
-        proximidad = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
-
-
-        I2C_Master_Start();
-        I2C_Master_Write(0x101);
-        espacios = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
-
-
-        if (proximidad){
-            PORTAbits.RA5 = 0;
-            PORTAbits.RA4 = 1;
-        }
-
-        else if (!proximidad){
-            PORTAbits.RA4 = 0;
-            PORTAbits.RA5 = 1;
-        }
-
-        if (espacios == 2){
-            PORTAbits.RA3 = 1;
-        }
-
-        else if (espacios != 2){
-            PORTAbits.RA3 = 0;
-        }
-
-       _delay((unsigned long)((1)*(4000000/4000.0)));
+       ;
     }
     return;
 }
@@ -2934,7 +2880,7 @@ void setup(void){
 
 
     TRISA = 0b00000000;
-    TRISB = 0b00000000;
+    TRISB = 0b00001110;
 
     TRISD = 0b00000000;
     TRISE = 0b00000000;
@@ -2946,14 +2892,8 @@ void setup(void){
     PORTE = 0b00000000;
 
 
-
-    IOCB = 0b00011111;
-    OPTION_REGbits.nRBPU = 0;
-    INTCONbits.RBIE = 1;
-
-
     INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 0;
+    INTCONbits.PEIE = 1;
     PIE1bits.SSPIE = 0;
     PIE1bits.ADIE = 0;
     INTCONbits.TMR0IE = 0;
@@ -2964,7 +2904,42 @@ void setup(void){
     INTCONbits.T0IF = 0;
 
 
-    OSCCONbits.IRCF = 0b110;
+
+    IOCB = 0b00000111;
+    OPTION_REGbits.nRBPU = 0;
+    INTCONbits.RBIE = 1;
+
+
+    OSCCONbits.IRCF = 0b100;
     OSCCONbits.SCS = 1;
-    I2C_Master_Init(100000);
+
+    I2C_Slave_Init(0x100);
+}
+
+void LotReading(void){
+    if (PORTBbits.RB1 == 0){
+        number1 = 0;
+    }
+
+    else if (PORTBbits.RB1 == 1){
+        number1 = 1;
+    }
+
+    if (PORTBbits.RB2 == 0){
+        number2 = 0;
+    }
+
+    else if (PORTBbits.RB2 == 1){
+        number2 = 1;
+    }
+
+    if (PORTBbits.RB3 == 0){
+        number3 = 0;
+    }
+
+    else if (PORTBbits.RB3 == 1){
+        number3 = 1;
+    }
+
+    lots = (number1+number2+number3);
 }

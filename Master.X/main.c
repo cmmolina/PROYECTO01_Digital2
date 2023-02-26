@@ -49,7 +49,7 @@
 // Variables 
 //******************************************************************************
 unsigned int proximidad = 1;
-
+unsigned int espacios;
 
 float VOLTAJE1; 
 float voltaje1;
@@ -129,6 +129,14 @@ void main(void) {
         I2C_Master_Stop();
         __delay_ms(200);
         
+        
+        I2C_Master_Start();
+        I2C_Master_Write(0x101);
+        espacios = I2C_Master_Read(0);
+        I2C_Master_Stop();
+        __delay_ms(200);
+        
+        
         if (proximidad){
             PORTAbits.RA5 = 0;
             PORTAbits.RA4 = 1;
@@ -137,6 +145,14 @@ void main(void) {
         else if (!proximidad){
             PORTAbits.RA4 = 0;
             PORTAbits.RA5 = 1;
+        }
+        
+        if (espacios == 2){
+            PORTAbits.RA3 = 1; 
+        }
+        
+        else if (espacios != 2){
+            PORTAbits.RA3 = 0;
         }
          
        __delay_ms(1);

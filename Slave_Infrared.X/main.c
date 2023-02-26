@@ -3,7 +3,7 @@
  * Electrónica Digital 2
  * Oscar Fernando Donis Martínez (#21611) y Carlos Molina (#21253)
  * Proyecto 01 - PIC Esclavo
- * Created on 25 de febrero de 2023, 01:43 AM
+ * Created on 26 de febrero de 2023, 01:02 AM
  */
 
 //*****************************************************************************
@@ -37,18 +37,20 @@
 //*****************************************************************************
 // Definición de variables
 //*****************************************************************************
+int lots;
+int number1 = 1;
+int number2 = 1;
+int number3 = 1;
+unsigned int contador;
 
-float distance_cm = 0; 
-float duration; 
 uint8_t z; 
 
-unsigned int proximity;
 //******************************************************************************
 // Prototipos de Funciones
 //******************************************************************************
 
 void setup(void);
-void readUpdate(void);
+void LotReading(void);
 
 //******************************************************************************
 // Interrupción
@@ -80,15 +82,17 @@ void __interrupt() isr (void){
         else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             SSPSTATbits.BF = 0;
-            readUpdate();
-            SSPBUF = proximity;
+            LotReading();
+            SSPBUF = lots;
             SSPCONbits.CKP = 1;
             __delay_us(250);
             while(SSPSTATbits.BF);
         }  
-    
         PIR1bits.SSPIF = 0;
-        
+    }
+    
+    if (INTCONbits.RBIF){
+        INTCONbits.RBIF = 0;
     }
 }
 
@@ -97,6 +101,9 @@ void __interrupt() isr (void){
 //******************************************************************************
 void main(void) {
     setup();
+    contador = PORTB;
+    lots = 3;
+    
     while(1){
        ;
     }
@@ -115,14 +122,14 @@ void setup(void){
 
             //76543210
     TRISA = 0b00000000;             //
-    TRISB = 0b00000000;             // 
-    //TRISC = 0b00000000;             //
-    TRISD = 0b00000010;             // RD1 como input
+    TRISB = 0b00001110;             // RB1, RB2, RB3 como inputs
+    //TRISC = 0b00000000;           //
+    TRISD = 0b00000000;             // 
     TRISE = 0b00000000;             // 
     
     PORTA = 0b00000000; 
     PORTB = 0b00000000; 
-    //PORTC = 0b00000000;             //
+    //PORTC = 0b00000000;           //
     PORTD = 0b00000000; 
     PORTE = 0b00000000;
     
@@ -131,61 +138,50 @@ void setup(void){
     INTCONbits.PEIE = 1;            // Se habilitan interrupciones de perifericos
     PIE1bits.SSPIE = 0;             // Se habilita la interrupción del SPI
     PIE1bits.ADIE = 0;              // Se ihabilita la interrupción del ADC
-    //PIE1bits.CCP1IE = 1;            // Se habilitan las interrupciones de captura
-    //PIE1bits.TMR1IE = 1;
     INTCONbits.TMR0IE = 0;          // Se inhabilitan las interrupciones del TMR0    
 
     PIR1bits.SSPIF = 0;             // Flag de SPI en 0
     PIR1bits.ADIF = 0;              // Flag de ADC en 0
     INTCONbits.RBIF = 0;            // Flag de Interrupciones del Puerto B en 0
     INTCONbits.T0IF = 0;            // Flag de TMR0 en 0
-    //PIR1bits.TMR1IF = 0;            // A TMR1 register capture ocurred
+    
+    //Configuración del Puerto B 
+           //76543210
+    IOCB = 0b00000111;              // Pines de Puerto B con Interrupción
+    OPTION_REGbits.nRBPU = 0;       // Pull-Up/Pull-Down
+    INTCONbits.RBIE = 1;            // Se habilitan las interrupciones del Puerto B
          
     //Configuración del Oscilador
     OSCCONbits.IRCF = 0b100;        // 1MHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
     
-    //Configuración del TMR1
-    T1CONbits.TMR1CS = 0;           // Oscilador Interno
-    T1CONbits.T1CKPS = 0b00;        // Clear Prescaler Bits
-    T1CONbits.TMR1ON = 0;           // Inicializamos el TMR1
-    
-    //Configuración del Módulo de Captura
-    //CCP1CONbits.CCP1M = 0b0101;     // Capturar flancos positivos
-    
-    I2C_Slave_Init(0x50);           // Configuramos la dirección del esclavo
+    I2C_Slave_Init(0x100);           // Configuramos la dirección del esclavo
 }
 
-void readUpdate(void){
-    PORTDbits.RD0 = 1; 
-    __delay_us(10);
-    PORTDbits.RD0 = 0;
-    
-    TMR1 = 0;
-        
-    while (!PORTDbits.RD1){
-        ;
+void LotReading(void){
+    if (PORTBbits.RB1 == 0){       // Espacio 1 Ocupado
+        number1 = 0;
     }
     
-    T1CONbits.TMR1ON = 1;           // Inicializamos el TMR1
-    
-    while (PORTDbits.RD1){
-        ;
+    else if (PORTBbits.RB1 == 1){  // Espacio 1 Libre
+        number1 = 1; 
     }
     
-    T1CONbits.TMR1ON = 0;
-    
-    duration = TMR1;
-    distance_cm = duration/58.8;
-    
-    if (distance_cm < 5){
-        PORTB = 10;
-        proximity = 1;
-    }
-    else{
-        PORTB = 5; 
-        proximity = 0;
+    if (PORTBbits.RB2 == 0){       // Espacio 2 Ocupado
+        number2 = 0;
     }
     
-    __delay_ms(100);
+    else if (PORTBbits.RB2 == 1){  // Espacio 2 Libre
+        number2 = 1; 
+    }
+    
+    if (PORTBbits.RB3 == 0){       // Espacio 3 Ocupado
+        number3 = 0;
+    }
+    
+    else if (PORTBbits.RB3 == 1){  // Espacio 3 Libre
+        number3 = 1; 
+    }
+    
+    lots = (number1+number2+number3);
 }
