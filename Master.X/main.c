@@ -34,7 +34,7 @@
 #include "IIC.h"
 //#include "RTC.h"
 
-#define _XTAL_FREQ 2000000
+#define _XTAL_FREQ 4000000
 #define tmr0_value 179
 
 //Bits de Control
@@ -45,13 +45,11 @@
 #define D6 PORTDbits.RD6
 #define D7 PORTDbits.RD7
 
-//
-#define uC2 PORTCbits.RC2
-#define uC3 PORTCbits.RC1
-
 //******************************************************************************
 // Variables 
 //******************************************************************************
+unsigned int proximidad = 1;
+
 
 float VOLTAJE1; 
 float voltaje1;
@@ -59,6 +57,7 @@ float voltaje1;
 unsigned int cont = 0; 
 unsigned int horas = 0;
 unsigned int temporal = 0;
+
 
 char tens;
 char ones;
@@ -75,13 +74,6 @@ uint8_t day, month, year;
 //******************************************************************************
 void setup(void);
 unsigned int map(uint8_t value, int inputmin, int inputmax, int outmin, int outmax);
-void convertirHora(void);
-void convertirFecha(void);
-void enviar_hora(void);
-void enviar_fecha(void);
-void leer_hora(void);
-void leer_fecha(void);
-void CONFIGURACION_INICIAL(void);
 
 
 //******************************************************************************
@@ -117,42 +109,7 @@ void __interrupt() isr (void){
     
     //Interrupción del Puerto B 
     if (INTCONbits.RBIF){ 
-        if (PORTBbits.RB0 == 1){   // Set
-            cont = 1;
-        }
-        else if (PORTBbits.RB1 == 1){ // Up (Horas/Dias)
-            if (temporal == 0){
-                if (horas <= 24){
-                    horas = horas+1;
-                }
-                else{
-                    horas = 0;
-                }
-            }
-            else if (temporal == 1){
-                ;
-            }
-        }   
-        else if (PORTBbits.RB2 == 1){ // Down (Horas/Dias)
-            if (temporal == 0){
-                if (horas >= 0){
-                    horas = horas-1;
-                }
-                else{
-                    horas = 24;
-                }
-            }
-            else if (temporal == 1){
-                ;
-            }
-        }
-        else if (PORTBbits.RB3 == 1){ // Up (Minutos/Meses)
-            ;
-        }   
-        else if (PORTBbits.RB4 == 1){ // Down (Minutos/Meses)
-            ;
-        }
-        INTCONbits.RBIF = 0;
+        ;
     }
 }
 
@@ -162,66 +119,26 @@ void __interrupt() isr (void){
 void main(void) {
     setup();
     Lcd_Init();
-    Lcd_Clear(); 
-   
-    while (cont==0){
-        Lcd_Set_Cursor(1,7);
-        Lcd_Write_String("Config. Hora");
-        Lcd_Set_Cursor(2,7);
-        tens = (horas/10)%10;
-        ones = horas%10;       
-        Lcd_Write_Char(horas+48);
-        Lcd_Write_Char(horas+48);
-    }
-   
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x00);
-    I2C_Master_Write(sec);
-    I2C_Master_Write(min);
-    I2C_Master_Write(hora);
-    I2C_Master_Stop();
-    __delay_ms(200);
+    Lcd_Clear();
     
-    while(1){ 
-        
-        leer_hora();
-        __delay_ms(200);
+    while(1){  
         
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        voltaje1 = I2C_Master_Read(0);
+        proximidad = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(200);
         
-        //Desplegamos Índice de Voltaje
-        Lcd_Set_Cursor(1,2);
-        Lcd_Write_String("S1");
-        Lcd_Set_Cursor(1,7);
-        Lcd_Write_String("HORA");
+        if (proximidad){
+            PORTAbits.RA5 = 0;
+            PORTAbits.RA4 = 1;
+        }
         
-        //Desplegamos S1 (Valor del POT1)
-        Lcd_Set_Cursor(2,1);
-        VOLTAJE1 = (voltaje1*5)/255;
-        sprintf(ADC1,"%.2f", VOLTAJE1);
-        Lcd_Write_String(ADC1);
-        Lcd_Write_String("V");
+        else if (!proximidad){
+            PORTAbits.RA4 = 0;
+            PORTAbits.RA5 = 1;
+        }
          
-       
-        //Desplegamos Hora
-        Lcd_Set_Cursor(2,7);
-        
-        
-        Lcd_Write_Char((hora>>4)+0x30);
-        Lcd_Write_Char((hora&0x0F)+0x30);
-        Lcd_Write_String(":");
-        Lcd_Write_Char((min>>4)+0x30);
-        Lcd_Write_Char((min&0x0F)+0x30);
-        Lcd_Write_String(":");
-        Lcd_Write_Char((sec>>4)+0x30);
-        Lcd_Write_Char((sec&0x0F)+0x30);
-        
-        
        __delay_ms(1);
     }
     return;
@@ -239,14 +156,14 @@ void setup(void){
 
             //76543210
     TRISA = 0b00000000;             // 
-    TRISB = 0b00011111;             // RB0, RB1, RB2, RB3, RB4 como inputs
+    TRISB = 0b00000000;             // 
     //TRISC = 0b00000000;           // 
     TRISD = 0b00000000;             //
     TRISE = 0b00000000;             // 
     
     PORTA = 0b00000000; 
     PORTB = 0b00000000; 
-    //PORTC = 0b00000100; 
+    //PORTC = 0b00000000; 
     PORTD = 0b00000000; 
     PORTE = 0b00000000;
     
@@ -269,8 +186,7 @@ void setup(void){
     INTCONbits.T0IF = 0;            // Flag de TMR0 en 0
     
     //Configuración del Oscilador
-    OSCCONbits.IRCF = 0b101;        // 2MHz
+    OSCCONbits.IRCF = 0b110;        // 4MHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
     I2C_Master_Init(100000);        // Inicializamso Comuncación I2C
-    
 }

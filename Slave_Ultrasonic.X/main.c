@@ -38,17 +38,16 @@
 #include "IIC.h"
 
 #define _XTAL_FREQ 1000000
-#define tmr0_value 179
 //*****************************************************************************
 // Definición de variables
 //*****************************************************************************
 
-float distance_cm; 
+float distance_cm = 0; 
 float duration; 
 uint8_t z; 
 
 unsigned int proximity;
-
+unsigned int ajuste; 
 //******************************************************************************
 // Prototipos de Funciones
 //******************************************************************************
@@ -87,7 +86,7 @@ void __interrupt() isr (void){
             z = SSPBUF;
             SSPSTATbits.BF = 0;
             readUpdate();
-            //SSPBUF = proximity;
+            SSPBUF = proximity;
             SSPCONbits.CKP = 1;
             __delay_us(250);
             while(SSPSTATbits.BF);
@@ -95,38 +94,6 @@ void __interrupt() isr (void){
     
         PIR1bits.SSPIF = 0;
         
-    }
-    
-    //Interrupción de Envío
-    if (PIR1bits.TXIF){
-        PIR1bits.TXIF = 0;
-    }
-    
-    //Interrupción de Recepción
-    if (PIR1bits.RCIF){
-        PIR1bits.RCIF = 0;
-    }
-    
-    //Interrupción del ADC cuando la lectura termina
-    if (PIR1bits.ADIF){
-        PIR1bits.ADIF = 0; 
-    }
-    
-    //Interrupción del TMR0
-    if (INTCONbits.T0IF){
-        TMR0 = tmr0_value;          // Cargamos Xms de nuevo al TMR0
-        INTCONbits.T0IF = 0;
-    }
-    
-    //Interrupción del Puerto B 
-    if (INTCONbits.RBIF){ 
-        INTCONbits.RBIF = 0;
-    }
-    
-    //Interrupción que indica que una captura del TMR1 ha ocurrido.
-    if (PIR1bits.TMR1IF){          
-        duration = CCPR1;
-        PIR1bits.TMR1IF = 0;
     }
 }
 
@@ -154,13 +121,13 @@ void setup(void){
             //76543210
     TRISA = 0b00000000;             //
     TRISB = 0b00000000;             // 
-    TRISC = 0b00000000;             // 
-    TRISD = 0b00000000;             //
+    //TRISC = 0b00000000;             //
+    TRISD = 0b00000010;             // RD1 como input
     TRISE = 0b00000000;             // 
     
     PORTA = 0b00000000; 
     PORTB = 0b00000000; 
-    PORTC = 0b00000100;             // RC2 como input
+    //PORTC = 0b00000000;             //
     PORTD = 0b00000000; 
     PORTE = 0b00000000;
     
@@ -169,14 +136,15 @@ void setup(void){
     INTCONbits.PEIE = 1;            // Se habilitan interrupciones de perifericos
     PIE1bits.SSPIE = 1;             // Se habilita la interrupción del SPI
     PIE1bits.ADIE = 0;              // Se ihabilita la interrupción del ADC
-    PIE1bits.CCP1IE = 1;            // Se habilitan las interrupciones de captura
+    //PIE1bits.CCP1IE = 1;            // Se habilitan las interrupciones de captura
+    //PIE1bits.TMR1IE = 1;
     INTCONbits.TMR0IE = 0;          // Se inhabilitan las interrupciones del TMR0    
 
     PIR1bits.SSPIF = 0;             // Flag de SPI en 0
     PIR1bits.ADIF = 0;              // Flag de ADC en 0
     INTCONbits.RBIF = 0;            // Flag de Interrupciones del Puerto B en 0
     INTCONbits.T0IF = 0;            // Flag de TMR0 en 0
-    PIR1bits.TMR1IF = 0;            // A TMR1 register capture ocurred
+    //PIR1bits.TMR1IF = 0;            // A TMR1 register capture ocurred
          
     //Configuración del Oscilador
     OSCCONbits.IRCF = 0b100;        // 1MHz
@@ -184,21 +152,47 @@ void setup(void){
     
     //Configuración del TMR1
     T1CONbits.TMR1CS = 0;           // Oscilador Interno
-    T1CONbits.T1CKPS = 0b10;        // Pre-scaler 4
-    T1CONbits.TMR1ON = 1;           // Inicializamos el TMR1
+    T1CONbits.T1CKPS = 0b00;        // Clear Prescaler Bits
+    T1CONbits.TMR1ON = 0;           // Inicializamos el TMR1
     
     //Configuración del Módulo de Captura
-    CCP1CONbits.CCP1M = 0b0101;     // Capturar flancos positivos
+    //CCP1CONbits.CCP1M = 0b0101;     // Capturar flancos positivos
     
     I2C_Slave_Init(0x50);           // Configuramos la dirección del esclavo
 }
 
 void readUpdate(void){
+    PORTDbits.RD2 = 1;
     
     PORTDbits.RD0 = 1; 
     __delay_us(10);
-    PORTDbits.RD3 = 0;
+    PORTDbits.RD0 = 0;
     
-    //duration = pulseIn;
-    //distance_cm = duration*(0.034)/2;
+    TMR1 = 0;
+        
+    while (!PORTDbits.RD1){
+        ;
+    }
+    
+    T1CONbits.TMR1ON = 1;           // Inicializamos el TMR1
+    
+    while (PORTDbits.RD1){
+        ;
+    }
+    
+    T1CONbits.TMR1ON = 0;
+    
+    duration = TMR1;
+    distance_cm = duration/58.8;
+    
+    if (distance_cm < 5){
+        PORTB = 10;
+        proximity = 1;
+    }
+    else{
+        PORTB = 5; 
+        proximity = 0;
+    }
+    
+    __delay_ms(100);
 }

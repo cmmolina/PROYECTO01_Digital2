@@ -2809,13 +2809,17 @@ int I2C_Master_Read(unsigned short a);
 
 void I2C_Slave_Init(uint8_t address);
 # 34 "main.c" 2
-# 56 "main.c"
+# 51 "main.c"
+unsigned int proximidad = 1;
+
+
 float VOLTAJE1;
 float voltaje1;
 
 unsigned int cont = 0;
 unsigned int horas = 0;
 unsigned int temporal = 0;
+
 
 char tens;
 char ones;
@@ -2832,13 +2836,6 @@ uint8_t day, month, year;
 
 void setup(void);
 unsigned int map(uint8_t value, int inputmin, int inputmax, int outmin, int outmax);
-void convertirHora(void);
-void convertirFecha(void);
-void enviar_hora(void);
-void enviar_fecha(void);
-void leer_hora(void);
-void leer_fecha(void);
-void CONFIGURACION_INICIAL(void);
 
 
 
@@ -2874,42 +2871,7 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 
     if (INTCONbits.RBIF){
-        if (PORTBbits.RB0 == 1){
-            cont = 1;
-        }
-        else if (PORTBbits.RB1 == 1){
-            if (temporal == 0){
-                if (horas <= 24){
-                    horas = horas+1;
-                }
-                else{
-                    horas = 0;
-                }
-            }
-            else if (temporal == 1){
-                ;
-            }
-        }
-        else if (PORTBbits.RB2 == 1){
-            if (temporal == 0){
-                if (horas >= 0){
-                    horas = horas-1;
-                }
-                else{
-                    horas = 24;
-                }
-            }
-            else if (temporal == 1){
-                ;
-            }
-        }
-        else if (PORTBbits.RB3 == 1){
-            ;
-        }
-        else if (PORTBbits.RB4 == 1){
-            ;
-        }
-        INTCONbits.RBIF = 0;
+        ;
     }
 }
 
@@ -2921,65 +2883,25 @@ void main(void) {
     Lcd_Init();
     Lcd_Clear();
 
-    while (cont==0){
-        Lcd_Set_Cursor(1,7);
-        Lcd_Write_String("Config. Hora");
-        Lcd_Set_Cursor(2,7);
-        tens = (horas/10)%10;
-        ones = horas%10;
-        Lcd_Write_Char(horas+48);
-        Lcd_Write_Char(horas+48);
-    }
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x00);
-    I2C_Master_Write(sec);
-    I2C_Master_Write(min);
-    I2C_Master_Write(hora);
-    I2C_Master_Stop();
-    _delay((unsigned long)((200)*(2000000/4000.0)));
-
     while(1){
-
-        leer_hora();
-        _delay((unsigned long)((200)*(2000000/4000.0)));
 
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        voltaje1 = I2C_Master_Read(0);
+        proximidad = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(2000000/4000.0)));
+        _delay((unsigned long)((200)*(4000000/4000.0)));
 
+        if (proximidad){
+            PORTAbits.RA5 = 0;
+            PORTAbits.RA4 = 1;
+        }
 
-        Lcd_Set_Cursor(1,2);
-        Lcd_Write_String("S1");
-        Lcd_Set_Cursor(1,7);
-        Lcd_Write_String("HORA");
+        else if (!proximidad){
+            PORTAbits.RA4 = 0;
+            PORTAbits.RA5 = 1;
+        }
 
-
-        Lcd_Set_Cursor(2,1);
-        VOLTAJE1 = (voltaje1*5)/255;
-        sprintf(ADC1,"%.2f", VOLTAJE1);
-        Lcd_Write_String(ADC1);
-        Lcd_Write_String("V");
-
-
-
-        Lcd_Set_Cursor(2,7);
-
-
-        Lcd_Write_Char((hora>>4)+0x30);
-        Lcd_Write_Char((hora&0x0F)+0x30);
-        Lcd_Write_String(":");
-        Lcd_Write_Char((min>>4)+0x30);
-        Lcd_Write_Char((min&0x0F)+0x30);
-        Lcd_Write_String(":");
-        Lcd_Write_Char((sec>>4)+0x30);
-        Lcd_Write_Char((sec&0x0F)+0x30);
-
-
-       _delay((unsigned long)((1)*(2000000/4000.0)));
+       _delay((unsigned long)((1)*(4000000/4000.0)));
     }
     return;
 }
@@ -2996,7 +2918,7 @@ void setup(void){
 
 
     TRISA = 0b00000000;
-    TRISB = 0b00011111;
+    TRISB = 0b00000000;
 
     TRISD = 0b00000000;
     TRISE = 0b00000000;
@@ -3026,8 +2948,7 @@ void setup(void){
     INTCONbits.T0IF = 0;
 
 
-    OSCCONbits.IRCF = 0b101;
+    OSCCONbits.IRCF = 0b110;
     OSCCONbits.SCS = 1;
     I2C_Master_Init(100000);
-
 }
