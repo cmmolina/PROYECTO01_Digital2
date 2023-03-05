@@ -225,17 +225,17 @@
 [v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
 "4282
 [v _SSPIF SSPIF `VEb  1 e 0 @99 ]
-"40 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Infrared.X\main.c
+"41 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Infrared.X\main.c
 [v _lots lots `i  1 e 2 0 ]
-"41
-[v _number1 number1 `i  1 e 2 0 ]
 "42
-[v _number2 number2 `i  1 e 2 0 ]
+[v _number1 number1 `i  1 e 2 0 ]
 "43
-[v _number3 number3 `i  1 e 2 0 ]
+[v _number2 number2 `i  1 e 2 0 ]
 "44
+[v _number3 number3 `i  1 e 2 0 ]
+"45
 [v _contador contador `ui  1 e 2 0 ]
-"46
+"47
 [v _z z `uc  1 e 1 0 ]
 "102
 [v _main main `(v  1 e 1 0 ]

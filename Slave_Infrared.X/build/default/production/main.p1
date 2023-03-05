@@ -313,32 +313,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" EECON1 equ 018Ch ;# ">
 "3547
 [; <" EECON2 equ 018Dh ;# ">
-"40 main.c
-[; ;main.c: 40: int lots;
+"41 main.c
+[; ;main.c: 41: int lots;
 [v _lots `i ~T0 @X0 1 e ]
-"41
-[; ;main.c: 41: int number1 = 1;
+"42
+[; ;main.c: 42: int number1 = 1;
 [v _number1 `i ~T0 @X0 1 e ]
 [i _number1
 -> 1 `i
 ]
-"42
-[; ;main.c: 42: int number2 = 1;
+"43
+[; ;main.c: 43: int number2 = 1;
 [v _number2 `i ~T0 @X0 1 e ]
 [i _number2
 -> 1 `i
 ]
-"43
-[; ;main.c: 43: int number3 = 1;
+"44
+[; ;main.c: 44: int number3 = 1;
 [v _number3 `i ~T0 @X0 1 e ]
 [i _number3
 -> 1 `i
 ]
-"44
-[; ;main.c: 44: unsigned int contador;
+"45
+[; ;main.c: 45: unsigned int contador;
 [v _contador `ui ~T0 @X0 1 e ]
-"46
-[; ;main.c: 46: uint8_t z;
+"47
+[; ;main.c: 47: uint8_t z;
 [v _z `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
 "58

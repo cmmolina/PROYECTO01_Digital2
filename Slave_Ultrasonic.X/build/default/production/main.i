@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 18 "main.c"
+# 14 "main.c"
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2642,10 +2642,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 2 3
-# 34 "main.c" 2
+# 30 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdint.h" 1 3
-# 35 "main.c" 2
+# 31 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2744,7 +2744,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 36 "main.c" 2
+# 32 "main.c" 2
 
 
 # 1 "./IIC.h" 1
@@ -2788,7 +2788,7 @@ int I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 38 "main.c" 2
+# 34 "main.c" 2
 
 
 
@@ -2801,7 +2801,6 @@ float duration;
 uint8_t z;
 
 unsigned int proximity;
-unsigned int ajuste;
 
 
 
@@ -2888,7 +2887,7 @@ void setup(void){
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
-    PIE1bits.SSPIE = 1;
+    PIE1bits.SSPIE = 0;
     PIE1bits.ADIE = 0;
 
 
@@ -2916,8 +2915,6 @@ void setup(void){
 }
 
 void readUpdate(void){
-    PORTDbits.RD2 = 1;
-
     PORTDbits.RD0 = 1;
     _delay((unsigned long)((10)*(1000000/4000000.0)));
     PORTDbits.RD0 = 0;
@@ -2940,11 +2937,9 @@ void readUpdate(void){
     distance_cm = duration/58.8;
 
     if (distance_cm < 5){
-        PORTB = 10;
         proximity = 1;
     }
     else{
-        PORTB = 5;
         proximity = 0;
     }
 

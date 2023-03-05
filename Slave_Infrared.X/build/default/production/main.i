@@ -2795,6 +2795,7 @@ void I2C_Slave_Init(uint8_t address);
 
 
 
+
 int lots;
 int number1 = 1;
 int number2 = 1;
@@ -2802,7 +2803,6 @@ int number3 = 1;
 unsigned int contador;
 
 uint8_t z;
-
 
 
 

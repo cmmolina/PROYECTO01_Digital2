@@ -33,11 +33,12 @@
 #include <proc/pic16f887.h>
 #include "IIC.h"
 
+
 #define _XTAL_FREQ 1000000
 //*****************************************************************************
 // Definición de variables
 //*****************************************************************************
-int lots;
+int lots = 3;
 int number1 = 1;
 int number2 = 1;
 int number3 = 1;
@@ -48,7 +49,6 @@ uint8_t z;
 //******************************************************************************
 // Prototipos de Funciones
 //******************************************************************************
-
 void setup(void);
 void LotReading(void);
 
@@ -102,7 +102,6 @@ void __interrupt() isr (void){
 void main(void) {
     setup();
     contador = PORTB;
-    lots = 3;
     
     while(1){
        ;

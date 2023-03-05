@@ -23,13 +23,13 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "90
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-"61 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+"56 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"103
+"98
 [v _main main `(v  1 e 1 0 ]
-"115
+"110
 [v _setup setup `(v  1 e 1 0 ]
-"164
+"159
 [v _readUpdate readUpdate `(v  1 e 1 0 ]
 "167 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc/pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -201,7 +201,7 @@
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "851 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S408 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S407 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -211,11 +211,11 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1558
-[u S417 . 1 `S408 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES417  1 e 1 @135 ]
+[u S416 . 1 `S407 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES416  1 e 1 @135 ]
 "1980
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S429 . 1 `uc 1 SEN 1 0 :1:0 
+[s S428 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -225,8 +225,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1997
-[u S438 . 1 `S429 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES438  1 e 1 @145 ]
+[u S437 . 1 `S428 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES437  1 e 1 @145 ]
 "2049
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2178
@@ -239,23 +239,23 @@
 [v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
 "4282
 [v _SSPIF SSPIF `VEb  1 e 0 @99 ]
-"45 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+"41 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 [v _distance_cm distance_cm `f  1 e 4 0 ]
-"46
+"42
 [v _duration duration `f  1 e 4 0 ]
-"47
+"43
 [v _z z `uc  1 e 1 0 ]
-"49
+"45
 [v _proximity proximity `ui  1 e 2 0 ]
-"103
+"98
 [v _main main `(v  1 e 1 0 ]
 {
-"109
+"104
 } 0
-"115
+"110
 [v _setup setup `(v  1 e 1 0 ]
 {
-"162
+"157
 } 0
 "90 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\IIC.c
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
@@ -266,15 +266,15 @@
 [v I2C_Slave_Init@address address `uc  1 a 1 19 ]
 "102
 } 0
-"61 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+"56 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"98
+"93
 } 0
-"164
+"159
 [v _readUpdate readUpdate `(v  1 e 1 0 ]
 {
-"198
+"189
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]

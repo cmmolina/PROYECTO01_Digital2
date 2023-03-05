@@ -48,8 +48,9 @@
 //******************************************************************************
 // Variables 
 //******************************************************************************
-unsigned int proximidad = 1;
+unsigned int proximidad;
 unsigned int espacios;
+float temperatura;
 
 float VOLTAJE1; 
 float voltaje1;
@@ -58,11 +59,12 @@ unsigned int cont = 0;
 unsigned int horas = 0;
 unsigned int temporal = 0;
 
-
+char thousands;
+char hundreds;
 char tens;
 char ones;
 
-char ADC1[4];
+char TEMP1[4];
 char HORA[] = "000000";
 char FECHA[] = "230923";
 
@@ -117,6 +119,7 @@ void __interrupt() isr (void){
 // Código Principal 
 //******************************************************************************
 void main(void) {
+    __delay_ms(1000);
     setup();
     Lcd_Init();
     Lcd_Clear();
@@ -128,8 +131,7 @@ void main(void) {
         proximidad = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(200);
-        
-        
+          
         I2C_Master_Start();
         I2C_Master_Write(0x101);
         espacios = I2C_Master_Read(0);
@@ -137,25 +139,34 @@ void main(void) {
         __delay_ms(200);
         
         
-        if (proximidad){
-            PORTAbits.RA5 = 0;
-            PORTAbits.RA4 = 1;
-        }
+        I2C_Master_Start();
+        I2C_Master_Write(0x111);
+        temperatura = I2C_Master_Read(0);
+        I2C_Master_Stop();
+        __delay_ms(200);
         
-        else if (!proximidad){
-            PORTAbits.RA4 = 0;
-            PORTAbits.RA5 = 1;
-        }
+        // Desplegamos Titulos
+        Lcd_Set_Cursor(1,1);
+        Lcd_Write_String("Welcome!");
+        Lcd_Set_Cursor(2,1);
+        Lcd_Write_String("Temp: ");
+        Lcd_Set_Cursor(2,13);
+        Lcd_Write_String("P->");
         
-        if (espacios == 2){
-            PORTAbits.RA3 = 1; 
-        }
+        // Desplegamos Indicador de Vehiculo Entrante 
+        Lcd_Set_Cursor(1,15);
+        Lcd_Write_Char(proximidad+32);
         
-        else if (espacios != 2){
-            PORTAbits.RA3 = 0;
-        }
-         
-       __delay_ms(1);
+        // Desplegamos Cantidad de Espacios de Parque Disponibles 
+        Lcd_Set_Cursor(2,16);
+        Lcd_Write_Char(espacios+48);
+        
+        // Desplegamos Valor de Temperatura
+        Lcd_Set_Cursor(2,6);
+        sprintf(TEMP1,"%.1f", temperatura);
+        Lcd_Write_String(TEMP1);
+        Lcd_Write_String("C");
+        
     }
     return;
 }
@@ -185,10 +196,12 @@ void setup(void){
     
     //Configuración del Puerto B 
            //76543210
+    /*
     IOCB = 0b00011111;              // Pines de Puerto B con Interrupción
     OPTION_REGbits.nRBPU = 0;       // Pull-Up/Pull-Down
     INTCONbits.RBIE = 1;            // Se habilitan las interrupciones del Puerto B
-    
+    */
+     
     //Configuración de las Interrupciones
     INTCONbits.GIE = 1;             // Se inhabilitan las interrupciones globales
     INTCONbits.PEIE = 0;            // Se inhabilitan interrupciones de perifericos

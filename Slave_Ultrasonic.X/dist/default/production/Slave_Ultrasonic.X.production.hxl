@@ -9,12 +9,12 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\Slave_Ultrasonic.X.production.hex)
-  8h - 925h		(dist/default/production\Slave_Ultrasonic.X.production.hex)
+  8h - 917h		(dist/default/production\Slave_Ultrasonic.X.production.hex)
   4000h - 4007h		(dist/default/production\Slave_Ultrasonic.X.production.hex)
   400Eh - 4011h		(dist/default/production\Slave_Ultrasonic.X.production.hex)
  Unused ranges:
   6h - 7h
-  926h - 3FFFh
+  918h - 3FFFh
   4008h - 400Dh
 
 ### Hex Memory Map ###
@@ -169,8 +169,7 @@
 000008E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000008F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000900 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000910 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000920 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+00000910 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00004000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- H1 H1
 00004010 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --

@@ -179,11 +179,9 @@ void readUpdate(void){
     distance_cm = duration/58.8;
     
     if (distance_cm < 5){
-        PORTB = 10;
         proximity = 1;
     }
     else{
-        PORTB = 5; 
         proximity = 0;
     }
     

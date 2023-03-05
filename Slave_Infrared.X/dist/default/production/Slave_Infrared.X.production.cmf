@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+$C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -78,24 +78,24 @@ STRING 147-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Slave_Infrared.X.production.o
-F cinit CODE >686:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-F cinit CODE >689:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-F cinit CODE >723:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-14 cinit CODE >724:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-15 cinit CODE >725:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-1A cinit CODE >726:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-1B cinit CODE >730:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-20 cinit CODE >731:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-21 cinit CODE >732:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-26 cinit CODE >733:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-27 cinit CODE >734:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-2C cinit CODE >735:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-2D cinit CODE >736:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-32 cinit CODE >737:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-33 cinit CODE >741:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-34 cinit CODE >747:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-34 cinit CODE >749:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
-35 cinit CODE >750:C:\Users\carlo\AppData\Local\Temp\xcAsq8o.s
+F cinit CODE >686:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+F cinit CODE >689:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+F cinit CODE >723:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+14 cinit CODE >724:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+15 cinit CODE >725:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+1A cinit CODE >726:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+1B cinit CODE >730:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+20 cinit CODE >731:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+21 cinit CODE >732:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+26 cinit CODE >733:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+27 cinit CODE >734:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+2C cinit CODE >735:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+2D cinit CODE >736:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+32 cinit CODE >737:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+33 cinit CODE >741:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+34 cinit CODE >747:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+34 cinit CODE >749:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
+35 cinit CODE >750:C:\Users\carlo\AppData\Local\Temp\xcAsjfs.s
 4 intentry CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Infrared.X\main.c
 9F text4 CODE >161:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Infrared.X\main.c
 9F text4 CODE >162:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Infrared.X\main.c
@@ -217,22 +217,22 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 _lots 22 0 BANK0 1 nvBANK0 dist/default/production\Slave_Infrared.X.production.o
 _main 256 0 CODE 0 maintext dist/default/production\Slave_Infrared.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
-start 18 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+start 18 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
@@ -244,8 +244,8 @@ _SSPCONbits 14 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
-___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
-___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
+___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 _I2C_Slave_Init 21E 0 CODE 0 text2 dist/default/production\Slave_Infrared.X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Slave_Infrared.X.production.o
@@ -257,7 +257,7 @@ __pcstackBANK0 24 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Infrared.X
 _SSPADD 93 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -307,7 +307,7 @@ __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __end_of_isr 13E 0 CODE 0 text3 dist/default/production\Slave_Infrared.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAsq8o.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAsjfs.o
 __pdataBANK0 27 0 BANK0 1 dataBANK0 dist/default/production\Slave_Infrared.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Slave_Infrared.X.production.o
 __pmaintext 256 0 CODE 0 maintext dist/default/production\Slave_Infrared.X.production.o
