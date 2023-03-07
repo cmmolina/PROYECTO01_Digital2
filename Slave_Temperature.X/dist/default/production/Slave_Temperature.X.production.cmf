@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+$C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 10 10 3 2 1
@@ -80,26 +80,26 @@ STRING 7AA-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Slave_Temperature.X.production.o
-13 cinit CODE >820:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-13 cinit CODE >823:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-13 cinit CODE >858:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-14 cinit CODE >859:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-15 cinit CODE >860:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-16 cinit CODE >861:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-17 cinit CODE >862:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-18 cinit CODE >863:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-19 cinit CODE >864:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-1A cinit CODE >865:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-1B cinit CODE >866:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-1C cinit CODE >867:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-1D cinit CODE >868:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-1E cinit CODE >869:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-1F cinit CODE >870:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-20 cinit CODE >871:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-21 cinit CODE >872:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-22 cinit CODE >878:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-22 cinit CODE >880:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
-23 cinit CODE >881:C:\Users\carlo\AppData\Local\Temp\xcAsr20.s
+13 cinit CODE >820:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+13 cinit CODE >823:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+13 cinit CODE >858:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+14 cinit CODE >859:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+15 cinit CODE >860:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+16 cinit CODE >861:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+17 cinit CODE >862:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+18 cinit CODE >863:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+19 cinit CODE >864:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+1A cinit CODE >865:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+1B cinit CODE >866:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+1C cinit CODE >867:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+1D cinit CODE >868:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+1E cinit CODE >869:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+1F cinit CODE >870:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+20 cinit CODE >871:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+21 cinit CODE >872:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+22 cinit CODE >878:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+22 cinit CODE >880:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
+23 cinit CODE >881:C:\Users\carlo\AppData\Local\Temp\xcAs9d4.s
 4 intentry CODE >54:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Temperature.X\main.c
 634 text11 CODE >43:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\fltol.c
 634 text11 CODE >47:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\fltol.c
@@ -616,20 +616,20 @@ DHT11_Read@i 77 0 COMMON 1 cstackCOMMON dist/default/production\Slave_Temperatur
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 _main F42 0 CODE 0 maintext dist/default/production\Slave_Temperature.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
-start 20 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+start 20 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 __end_of_DHT11_Response E76 0 CODE 0 text9 dist/default/production\Slave_Temperature.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_DHT11_Read DFA 0 CODE 0 text10 dist/default/production\Slave_Temperature.X.production.o
 ?_DHT11_Response 70 0 COMMON 1 cstackCOMMON dist/default/production\Slave_Temperature.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 _DHT11_Start ED8 0 CODE 0 text8 dist/default/production\Slave_Temperature.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
@@ -644,8 +644,8 @@ ___fldiv@sign 31 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Temperature
 __end_of___fladd 4FC 0 CODE 0 text7 dist/default/production\Slave_Temperature.X.production.o
 __end_of___fldiv 8A2 0 CODE 0 text6 dist/default/production\Slave_Temperature.X.production.o
 __end_of___fltol D54 0 CODE 0 text11 dist/default/production\Slave_Temperature.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
-___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
+___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 _I2C_Slave_Init F0E 0 CODE 0 text2 dist/default/production\Slave_Temperature.X.production.o
 ___fladd@a 3E 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Temperature.X.production.o
 ___fladd@b 3A 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Temperature.X.production.o
@@ -660,7 +660,7 @@ __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\Slave_Temperatur
 _SSPADD 93 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -715,7 +715,7 @@ __end_of_DHT11_Start F0E 0 CODE 0 text8 dist/default/production\Slave_Temperatur
 ___xxtofl 8A2 0 CODE 0 text5 dist/default/production\Slave_Temperature.X.production.o
 __end_of_isr C68 0 CODE 0 text3 dist/default/production\Slave_Temperature.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAsr20.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAs9d4.o
 __end_of___xxtofl A12 0 CODE 0 text5 dist/default/production\Slave_Temperature.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Slave_Temperature.X.production.o

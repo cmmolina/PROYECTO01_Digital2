@@ -604,8 +604,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 158 ]
 "170
-[; ;main.c: 170:     temperature = ((float)temperatura+((float)temperatura_dec/100));
-[e = _temperature + -> _temperatura `f / -> _temperatura_dec `f -> -> 100 `i `f ]
+[; ;main.c: 170:     temperature = ((float)temperatura+((float)temperatura_dec/10));
+[e = _temperature + -> _temperatura `f / -> _temperatura_dec `f -> -> 10 `i `f ]
 "172
 [; ;main.c: 172: }
 [e :UE 157 ]

@@ -167,6 +167,6 @@ void readTemp(void){
        
     //temperature = (48 + ((temperatura/10)%10));
     //temperature = temperatura;
-    temperature = ((float)temperatura+((float)temperatura_dec/100));
+    temperature = ((float)temperatura+((float)temperatura_dec/10));
     //temperature = (float) (DHT11_Join_Data(temperatura, temperatura_dec)/10.0f);
 }

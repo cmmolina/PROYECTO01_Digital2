@@ -34,7 +34,7 @@
 #include "IIC.h"
 //#include "RTC.h"
 
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 8000000
 #define tmr0_value 179
 
 //Bits de Control
@@ -49,8 +49,8 @@
 // Variables 
 //******************************************************************************
 unsigned int proximidad;
-unsigned int espacios;
-float temperatura;
+int espacios = 0;
+unsigned int temperatura;
 
 float VOLTAJE1; 
 float voltaje1;
@@ -59,14 +59,12 @@ unsigned int cont = 0;
 unsigned int horas = 0;
 unsigned int temporal = 0;
 
-char thousands;
-char hundreds;
+//char thousands;
+//char hundreds;
 char tens;
 char ones;
 
 char TEMP1[4];
-char HORA[] = "000000";
-char FECHA[] = "230923";
 
 uint8_t sec, min, hora; 
 uint8_t day, month, year;
@@ -111,7 +109,7 @@ void __interrupt() isr (void){
     
     //Interrupción del Puerto B 
     if (INTCONbits.RBIF){ 
-        ;
+        INTCONbits.RBIF = 0;
     }
 }
 
@@ -119,31 +117,46 @@ void __interrupt() isr (void){
 // Código Principal 
 //******************************************************************************
 void main(void) {
-    __delay_ms(1000);
+    __delay_ms(1500);
     setup();
     Lcd_Init();
     Lcd_Clear();
-    
+    espacios = 1;
     while(1){  
         
         I2C_Master_Start();
         I2C_Master_Write(0x51);
         proximidad = I2C_Master_Read(0);
         I2C_Master_Stop();
-        __delay_ms(200);
+        __delay_ms(250);
           
         I2C_Master_Start();
         I2C_Master_Write(0x101);
         espacios = I2C_Master_Read(0);
         I2C_Master_Stop();
-        __delay_ms(200);
+        __delay_ms(250);
         
         
         I2C_Master_Start();
         I2C_Master_Write(0x111);
         temperatura = I2C_Master_Read(0);
         I2C_Master_Stop();
+        __delay_ms(250);
+        
+        /*
+        I2C_Master_Start();
+        I2C_Master_Write(0x61);
+        I2C_Master_Write(espacios);
+        I2C_Master_Stop();
         __delay_ms(200);
+        
+        I2C_Master_Start();
+        I2C_Master_Write(0x61);
+        I2C_Master_Write(temperatura);
+        I2C_Master_Stop();
+        __delay_ms(200);
+        */
+        
         
         // Desplegamos Titulos
         Lcd_Set_Cursor(1,1);
@@ -162,10 +175,49 @@ void main(void) {
         Lcd_Write_Char(espacios+48);
         
         // Desplegamos Valor de Temperatura
+        tens = (temperatura/10)%10;
+        ones = temperatura%10; 
+        
         Lcd_Set_Cursor(2,6);
-        sprintf(TEMP1,"%.1f", temperatura);
-        Lcd_Write_String(TEMP1);
+        Lcd_Write_Char(tens+48);
+        Lcd_Write_Char(ones+48);
+        Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
+        
+        if (proximidad == 1 && espacios>0){
+            __delay_ms(250);
+            PORTBbits.RB7 = 1;
+            PORTBbits.RB6 = 0;
+            __delay_ms(100);
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+            
+            while (proximidad){
+                I2C_Master_Start();
+                I2C_Master_Write(0x51);
+                proximidad = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                __delay_ms(200);
+            }
+            
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 1;
+            __delay_ms(100);
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
+        
+        else{
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
+        
+        I2C_Master_Start();
+        I2C_Master_Write(0x68);
+        I2C_Master_Write(0x49);
+        I2C_Master_Stop();
+        __delay_ms(200);
+        
         
     }
     return;
@@ -216,6 +268,7 @@ void setup(void){
     
     //Configuración del Oscilador
     OSCCONbits.IRCF = 0b110;        // 4MHz
+    //OSCCONbits.IRCF = 0b011;        // 500kHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
     I2C_Master_Init(100000);        // Inicializamso Comuncación I2C
 }

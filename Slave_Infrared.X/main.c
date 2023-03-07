@@ -34,11 +34,11 @@
 #include "IIC.h"
 
 
-#define _XTAL_FREQ 1000000
+#define _XTAL_FREQ 8000000
 //*****************************************************************************
 // Definición de variables
 //*****************************************************************************
-int lots = 3;
+unsigned int lots;
 int number1 = 1;
 int number2 = 1;
 int number3 = 1;
@@ -101,8 +101,7 @@ void __interrupt() isr (void){
 //******************************************************************************
 void main(void) {
     setup();
-    contador = PORTB;
-    
+    lots = 0;
     while(1){
        ;
     }
@@ -146,23 +145,25 @@ void setup(void){
     
     //Configuración del Puerto B 
            //76543210
-    IOCB = 0b00000111;              // Pines de Puerto B con Interrupción
-    OPTION_REGbits.nRBPU = 0;       // Pull-Up/Pull-Down
-    INTCONbits.RBIE = 1;            // Se habilitan las interrupciones del Puerto B
+    //IOCB = 0b00000111;              // Pines de Puerto B con Interrupción
+    //OPTION_REGbits.nRBPU = 0;       // Pull-Up/Pull-Down
+    //INTCONbits.RBIE = 1;            // Se habilitan las interrupciones del Puerto B
          
     //Configuración del Oscilador
-    OSCCONbits.IRCF = 0b100;        // 1MHz
+    OSCCONbits.IRCF = 0b111;        // 8MHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
     
     I2C_Slave_Init(0x100);           // Configuramos la dirección del esclavo
 }
 
 void LotReading(void){
+    
+    
     if (PORTBbits.RB1 == 0){       // Espacio 1 Ocupado
         number1 = 0;
     }
     
-    else if (PORTBbits.RB1 == 1){  // Espacio 1 Libre
+    else{                          // Espacio 1 Libre
         number1 = 1; 
     }
     
@@ -170,7 +171,7 @@ void LotReading(void){
         number2 = 0;
     }
     
-    else if (PORTBbits.RB2 == 1){  // Espacio 2 Libre
+    else{                          // Espacio 2 Libre
         number2 = 1; 
     }
     
@@ -178,7 +179,7 @@ void LotReading(void){
         number3 = 0;
     }
     
-    else if (PORTBbits.RB3 == 1){  // Espacio 3 Libre
+    else{  // Espacio 3 Libre
         number3 = 1; 
     }
     

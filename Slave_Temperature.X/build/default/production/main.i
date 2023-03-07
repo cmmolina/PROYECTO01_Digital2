@@ -2932,6 +2932,6 @@ void readTemp(void){
 
 
 
-    temperature = ((float)temperatura+((float)temperatura_dec/100));
+    temperature = ((float)temperatura+((float)temperatura_dec/10));
 
 }

@@ -2796,7 +2796,7 @@ void I2C_Slave_Init(uint8_t address);
 
 
 
-int lots;
+unsigned int lots;
 int number1 = 1;
 int number2 = 1;
 int number3 = 1;
@@ -2833,7 +2833,7 @@ void __attribute__((picinterrupt(("")))) isr (void){
             SSPCONbits.CKP = 1;
             while(!SSPSTATbits.BF);
             PORTD = SSPBUF;
-            _delay((unsigned long)((250)*(1000000/4000000.0)));
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
 
         }
 
@@ -2843,7 +2843,7 @@ void __attribute__((picinterrupt(("")))) isr (void){
             LotReading();
             SSPBUF = lots;
             SSPCONbits.CKP = 1;
-            _delay((unsigned long)((250)*(1000000/4000000.0)));
+            _delay((unsigned long)((250)*(8000000/4000000.0)));
             while(SSPSTATbits.BF);
         }
         PIR1bits.SSPIF = 0;
@@ -2859,9 +2859,7 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 void main(void) {
     setup();
-    contador = PORTB;
-    lots = 3;
-
+    lots = 0;
     while(1){
        ;
     }
@@ -2902,26 +2900,21 @@ void setup(void){
     PIR1bits.ADIF = 0;
     INTCONbits.RBIF = 0;
     INTCONbits.T0IF = 0;
-
-
-
-    IOCB = 0b00000111;
-    OPTION_REGbits.nRBPU = 0;
-    INTCONbits.RBIE = 1;
-
-
-    OSCCONbits.IRCF = 0b100;
+# 153 "main.c"
+    OSCCONbits.IRCF = 0b111;
     OSCCONbits.SCS = 1;
 
     I2C_Slave_Init(0x100);
 }
 
 void LotReading(void){
+
+
     if (PORTBbits.RB1 == 0){
         number1 = 0;
     }
 
-    else if (PORTBbits.RB1 == 1){
+    else{
         number1 = 1;
     }
 
@@ -2929,7 +2922,7 @@ void LotReading(void){
         number2 = 0;
     }
 
-    else if (PORTBbits.RB2 == 1){
+    else{
         number2 = 1;
     }
 
@@ -2937,7 +2930,7 @@ void LotReading(void){
         number3 = 0;
     }
 
-    else if (PORTBbits.RB3 == 1){
+    else{
         number3 = 1;
     }
 

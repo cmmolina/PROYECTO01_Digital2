@@ -2811,8 +2811,8 @@ void I2C_Slave_Init(uint8_t address);
 # 34 "main.c" 2
 # 51 "main.c"
 unsigned int proximidad;
-unsigned int espacios;
-float temperatura;
+int espacios = 0;
+unsigned int temperatura;
 
 float VOLTAJE1;
 float voltaje1;
@@ -2821,14 +2821,12 @@ unsigned int cont = 0;
 unsigned int horas = 0;
 unsigned int temporal = 0;
 
-char thousands;
-char hundreds;
+
+
 char tens;
 char ones;
 
 char TEMP1[4];
-char HORA[] = "000000";
-char FECHA[] = "230923";
 
 uint8_t sec, min, hora;
 uint8_t day, month, year;
@@ -2873,7 +2871,7 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 
     if (INTCONbits.RBIF){
-        ;
+        INTCONbits.RBIF = 0;
     }
 }
 
@@ -2881,33 +2879,32 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 
 void main(void) {
-    _delay((unsigned long)((1000)*(4000000/4000.0)));
+    _delay((unsigned long)((1500)*(8000000/4000.0)));
     setup();
     Lcd_Init();
     Lcd_Clear();
-
+    espacios = 1;
     while(1){
 
         I2C_Master_Start();
         I2C_Master_Write(0x51);
         proximidad = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+        _delay((unsigned long)((250)*(8000000/4000.0)));
 
         I2C_Master_Start();
         I2C_Master_Write(0x101);
         espacios = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+        _delay((unsigned long)((250)*(8000000/4000.0)));
 
 
         I2C_Master_Start();
         I2C_Master_Write(0x111);
         temperatura = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
-
-
+        _delay((unsigned long)((250)*(8000000/4000.0)));
+# 162 "main.c"
         Lcd_Set_Cursor(1,1);
         Lcd_Write_String("Welcome!");
         Lcd_Set_Cursor(2,1);
@@ -2924,10 +2921,49 @@ void main(void) {
         Lcd_Write_Char(espacios+48);
 
 
+        tens = (temperatura/10)%10;
+        ones = temperatura%10;
+
         Lcd_Set_Cursor(2,6);
-        sprintf(TEMP1,"%.1f", temperatura);
-        Lcd_Write_String(TEMP1);
+        Lcd_Write_Char(tens+48);
+        Lcd_Write_Char(ones+48);
+        Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
+
+        if (proximidad == 1 && espacios>0){
+            _delay((unsigned long)((250)*(8000000/4000.0)));
+            PORTBbits.RB7 = 1;
+            PORTBbits.RB6 = 0;
+            _delay((unsigned long)((100)*(8000000/4000.0)));
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+
+            while (proximidad){
+                I2C_Master_Start();
+                I2C_Master_Write(0x51);
+                proximidad = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                _delay((unsigned long)((200)*(8000000/4000.0)));
+            }
+
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 1;
+            _delay((unsigned long)((100)*(8000000/4000.0)));
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
+
+        else{
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
+
+        I2C_Master_Start();
+        I2C_Master_Write(0x68);
+        I2C_Master_Write(0x49);
+        I2C_Master_Stop();
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+
 
     }
     return;
@@ -2955,7 +2991,7 @@ void setup(void){
 
     PORTD = 0b00000000;
     PORTE = 0b00000000;
-# 206 "main.c"
+# 258 "main.c"
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 0;
     PIE1bits.SSPIE = 0;
@@ -2969,6 +3005,7 @@ void setup(void){
 
 
     OSCCONbits.IRCF = 0b110;
+
     OSCCONbits.SCS = 1;
     I2C_Master_Init(100000);
 }
