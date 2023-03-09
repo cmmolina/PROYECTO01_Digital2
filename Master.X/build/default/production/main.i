@@ -2811,30 +2811,29 @@ void I2C_Slave_Init(uint8_t address);
 # 34 "main.c" 2
 # 51 "main.c"
 unsigned int proximidad;
-int espacios = 0;
+unsigned int espacios;
+unsigned int espacios_comp;
 unsigned int temperatura;
+unsigned int cont;
+unsigned int flag = 0;
 
 float VOLTAJE1;
 float voltaje1;
 
 unsigned int cont = 0;
-unsigned int horas = 0;
+unsigned int i;
 unsigned int temporal = 0;
-
-
 
 char tens;
 char ones;
 
 char TEMP1[4];
 
-uint8_t sec, min, hora;
-uint8_t day, month, year;
-
 
 
 
 void setup(void);
+void initUART(void);
 unsigned int map(uint8_t value, int inputmin, int inputmax, int outmin, int outmax);
 
 
@@ -2880,12 +2879,14 @@ void __attribute__((picinterrupt(("")))) isr (void){
 
 void main(void) {
     _delay((unsigned long)((1500)*(8000000/4000.0)));
+
     setup();
+    initUART();
+    i = 1;
     Lcd_Init();
     Lcd_Clear();
-    espacios = 1;
-    while(1){
 
+    while(1){
         I2C_Master_Start();
         I2C_Master_Write(0x51);
         proximidad = I2C_Master_Read(0);
@@ -2904,7 +2905,8 @@ void main(void) {
         temperatura = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((250)*(8000000/4000.0)));
-# 162 "main.c"
+
+
         Lcd_Set_Cursor(1,1);
         Lcd_Write_String("Welcome!");
         Lcd_Set_Cursor(2,1);
@@ -2930,40 +2932,41 @@ void main(void) {
         Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
 
-        if (proximidad == 1 && espacios>0){
-            _delay((unsigned long)((250)*(8000000/4000.0)));
+
+        if (proximidad == 1 && (espacios>0) && (flag != 1) ){
             PORTBbits.RB7 = 1;
             PORTBbits.RB6 = 0;
             _delay((unsigned long)((100)*(8000000/4000.0)));
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 0;
+            espacios_comp = espacios;
+            flag = 1;
+        }
 
-            while (proximidad){
-                I2C_Master_Start();
-                I2C_Master_Write(0x51);
-                proximidad = I2C_Master_Read(0);
-                I2C_Master_Stop();
-                _delay((unsigned long)((200)*(8000000/4000.0)));
-            }
-
+        if (proximidad == 0 && (espacios != espacios_comp)){
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 1;
             _delay((unsigned long)((100)*(8000000/4000.0)));
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 0;
+            flag = 0;
         }
 
-        else{
-            PORTBbits.RB7 = 0;
-            PORTBbits.RB6 = 0;
+
+
+        if (i == 1){
+            TXREG = espacios;
+            PIR1bits.TXIF = 0;
+            i = 2;
         }
 
-        I2C_Master_Start();
-        I2C_Master_Write(0x68);
-        I2C_Master_Write(0x49);
-        I2C_Master_Stop();
-        _delay((unsigned long)((200)*(8000000/4000.0)));
-
+        else if (i == 2){
+            TXREG = temperatura;
+            PIR1bits.TXIF = 0;
+            i = 1;
+        }
+# 216 "main.c"
+        _delay((unsigned long)((5250)*(8000000/4000.0)));
 
     }
     return;
@@ -2991,9 +2994,11 @@ void setup(void){
 
     PORTD = 0b00000000;
     PORTE = 0b00000000;
-# 258 "main.c"
+
+    TRISCbits.TRISC6 = 0;
+# 256 "main.c"
     INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 0;
+    INTCONbits.PEIE = 1;
     PIE1bits.SSPIE = 0;
     PIE1bits.ADIE = 0;
     INTCONbits.TMR0IE = 0;
@@ -3004,8 +3009,26 @@ void setup(void){
     INTCONbits.T0IF = 0;
 
 
-    OSCCONbits.IRCF = 0b110;
+    OSCCONbits.IRCF = 0b111;
 
     OSCCONbits.SCS = 1;
+
+
+
     I2C_Master_Init(100000);
+}
+
+void initUART(void){
+
+    SPBRG = 12;
+
+    TXSTAbits.SYNC = 0;
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.TXEN = 1;
+
+
+    PIR1bits.TXIF = 0;
+
+    RCSTAbits.CREN = 1;
+
 }

@@ -43,19 +43,21 @@
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 "98
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"82 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+"81 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"119
+"118
 [v _main main `(v  1 e 1 0 ]
-"230
+"226
 [v _setup setup `(v  1 e 1 0 ]
+"277
+[v _initUART initUART `(v  1 e 1 0 ]
 "60 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc/pic16f887.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "167
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "229
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S126 . 1 `uc 1 RB0 1 0 :1:0 
+[s S130 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -65,8 +67,8 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "246
-[u S135 . 1 `S126 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES135  1 e 1 @6 ]
+[u S139 . 1 `S130 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES139  1 e 1 @6 ]
 "353
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "415
@@ -99,60 +101,35 @@
 "554
 [u S30 . 1 `S22 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES30  1 e 1 @12 ]
+[s S271 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1069
+[s S280 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S284 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S287 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S290 . 1 `S271 1 . 1 0 `S280 1 . 1 0 `S284 1 . 1 0 `S287 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES290  1 e 1 @24 ]
+"1134
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1417
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1479
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"1603
-[v _TRISD TRISD `VEuc  1 e 1 @136 ]
-"1665
-[v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S157 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 CCP1IE 1 0 :1:2 
-`uc 1 SSPIE 1 0 :1:3 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-]
-"1719
-[u S165 . 1 `S157 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES165  1 e 1 @140 ]
-[s S176 . 1 `uc 1 SCS 1 0 :1:0 
-`uc 1 LTS 1 0 :1:1 
-`uc 1 HTS 1 0 :1:2 
-`uc 1 OSTS 1 0 :1:3 
-`uc 1 IRCF 1 0 :3:4 
-]
-"1883
-[s S182 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 IRCF0 1 0 :1:4 
-`uc 1 IRCF1 1 0 :1:5 
-`uc 1 IRCF2 1 0 :1:6 
-]
-[u S187 . 1 `S176 1 . 1 0 `S182 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES187  1 e 1 @143 ]
-"3388
-[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-"3450
-[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S282 . 1 `uc 1 RD0 1 0 :1:0 
-`uc 1 RD1 1 0 :1:1 
-`uc 1 RD2 1 0 :1:2 
-`uc 1 RD3 1 0 :1:3 
-`uc 1 RD4 1 0 :1:4 
-`uc 1 RD5 1 0 :1:5 
-`uc 1 RD6 1 0 :1:6 
-`uc 1 RD7 1 0 :1:7 
-]
-"370 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
-[u S291 . 1 `S282 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES291  1 e 1 @8 ]
-"844
-[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
-"851
-[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S341 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S162 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -162,11 +139,81 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1558
-[u S350 . 1 `S341 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES350  1 e 1 @135 ]
+[u S171 . 1 `S162 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES171  1 e 1 @135 ]
+"1603
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1665
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S183 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1719
+[u S191 . 1 `S183 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES191  1 e 1 @140 ]
+[s S202 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1883
+[s S208 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S213 . 1 `S202 1 . 1 0 `S208 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES213  1 e 1 @143 ]
+[s S234 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2583
+[s S243 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S247 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S250 . 1 `S234 1 . 1 0 `S243 1 . 1 0 `S247 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES250  1 e 1 @152 ]
+"2643
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"3388
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3450
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+[s S412 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"370 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f887.h
+[u S421 . 1 `S412 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES421  1 e 1 @8 ]
+"844
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"851
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "1980
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S362 . 1 `uc 1 SEN 1 0 :1:0 
+[s S483 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -176,8 +223,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1997
-[u S371 . 1 `S362 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES371  1 e 1 @145 ]
+[u S492 . 1 `S483 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES492  1 e 1 @145 ]
 "2049
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2178
@@ -207,22 +254,28 @@
 "51 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
 [v _proximidad proximidad `ui  1 e 2 0 ]
 "52
-[v _espacios espacios `i  1 e 2 0 ]
+[v _espacios espacios `ui  1 e 2 0 ]
 "53
+[v _espacios_comp espacios_comp `ui  1 e 2 0 ]
+"54
 [v _temperatura temperatura `ui  1 e 2 0 ]
-"64
-[v _tens tens `uc  1 e 1 0 ]
+"56
+[v _flag flag `ui  1 e 2 0 ]
+"62
+[v _i i `ui  1 e 2 0 ]
 "65
+[v _tens tens `uc  1 e 1 0 ]
+"66
 [v _ones ones `uc  1 e 1 0 ]
-"119
+"118
 [v _main main `(v  1 e 1 0 ]
 {
-"224
+"220
 } 0
-"230
+"226
 [v _setup setup `(v  1 e 1 0 ]
 {
-"274
+"275
 } 0
 "13 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
@@ -241,6 +294,11 @@
 [v ___lldiv@divisor divisor `ul  1 p 4 2 ]
 [v ___lldiv@dividend dividend `ul  1 p 4 6 ]
 "30
+} 0
+"277 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+[v _initUART initUART `(v  1 e 1 0 ]
+{
+"290
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
@@ -360,8 +418,8 @@
 {
 "32
 } 0
-"82 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+"81 C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"114
+"113
 } 0

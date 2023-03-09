@@ -49,30 +49,29 @@
 // Variables 
 //******************************************************************************
 unsigned int proximidad;
-int espacios = 0;
+unsigned int espacios;
+unsigned int espacios_comp;
 unsigned int temperatura;
+unsigned int cont;
+unsigned int flag = 0;
 
 float VOLTAJE1; 
 float voltaje1;
 
 unsigned int cont = 0; 
-unsigned int horas = 0;
+unsigned int i;
 unsigned int temporal = 0;
 
-//char thousands;
-//char hundreds;
 char tens;
 char ones;
 
 char TEMP1[4];
 
-uint8_t sec, min, hora; 
-uint8_t day, month, year;
-
 //******************************************************************************
 // Prototipos de Funciones
 //******************************************************************************
 void setup(void);
+void initUART(void);
 unsigned int map(uint8_t value, int inputmin, int inputmax, int outmin, int outmax);
 
 
@@ -81,7 +80,7 @@ unsigned int map(uint8_t value, int inputmin, int inputmax, int outmin, int outm
 //******************************************************************************
 void __interrupt() isr (void){    
     
-    //Interrupción que indica que una Transmisión/Recepción SPI ha tomado lugar
+    //Interrupción que indica que la data se ha leído.
     if (PIR1bits.SSPIF){
         PIR1bits.SSPIF = 0;
     }
@@ -118,12 +117,14 @@ void __interrupt() isr (void){
 //******************************************************************************
 void main(void) {
     __delay_ms(1500);
+    
     setup();
+    initUART();
+    i = 1;
     Lcd_Init();
     Lcd_Clear();
-    espacios = 1;
+
     while(1){  
-        
         I2C_Master_Start();
         I2C_Master_Write(0x51);
         proximidad = I2C_Master_Read(0);
@@ -142,21 +143,6 @@ void main(void) {
         temperatura = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(250);
-        
-        /*
-        I2C_Master_Start();
-        I2C_Master_Write(0x61);
-        I2C_Master_Write(espacios);
-        I2C_Master_Stop();
-        __delay_ms(200);
-        
-        I2C_Master_Start();
-        I2C_Master_Write(0x61);
-        I2C_Master_Write(temperatura);
-        I2C_Master_Stop();
-        __delay_ms(200);
-        */
-        
         
         // Desplegamos Titulos
         Lcd_Set_Cursor(1,1);
@@ -184,41 +170,51 @@ void main(void) {
         Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
         
-        if (proximidad == 1 && espacios>0){
-            __delay_ms(250);
+        //Apertura de la talanquera 
+        if (proximidad == 1 && (espacios>0) && (flag != 1) ){
             PORTBbits.RB7 = 1;
             PORTBbits.RB6 = 0;
             __delay_ms(100);
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 0;
-            
-            while (proximidad){
-                I2C_Master_Start();
-                I2C_Master_Write(0x51);
-                proximidad = I2C_Master_Read(0);
-                I2C_Master_Stop();
-                __delay_ms(200);
-            }
-            
+            espacios_comp = espacios; 
+            flag = 1;
+        }
+        
+        if (proximidad == 0 && (espacios != espacios_comp)){
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 1;
             __delay_ms(100);
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 0;
+            flag = 0;
         }
         
-        else{
-            PORTBbits.RB7 = 0;
-            PORTBbits.RB6 = 0;
+        //Envío de Información al ESP32
+        
+        if (i == 1){
+            TXREG = espacios;             // Enviamos la información
+            PIR1bits.TXIF = 0;              // Apagamos la bandera 
+            i = 2;
         }
         
-        I2C_Master_Start();
-        I2C_Master_Write(0x68);
-        I2C_Master_Write(0x49);
-        I2C_Master_Stop();
-        __delay_ms(200);
+        else if (i == 2){
+            TXREG = temperatura;             // Enviamos la información
+            PIR1bits.TXIF = 0;              // Apagamos la bandera 
+            i = 1;
+        }
         
         
+        
+        //TXREG = temperatura;
+        /*while(!TXIF){
+            ;
+        }
+        TXIF = 0;
+        */
+        
+        __delay_ms(5250);
+    //End of Loop
     }
     return;
 }
@@ -246,6 +242,8 @@ void setup(void){
     PORTD = 0b00000000; 
     PORTE = 0b00000000;
     
+    TRISCbits.TRISC6 = 0;           // RC6/TX como output
+    
     //Configuración del Puerto B 
            //76543210
     /*
@@ -256,7 +254,7 @@ void setup(void){
      
     //Configuración de las Interrupciones
     INTCONbits.GIE = 1;             // Se inhabilitan las interrupciones globales
-    INTCONbits.PEIE = 0;            // Se inhabilitan interrupciones de perifericos
+    INTCONbits.PEIE = 1;            // Se inhabilitan interrupciones de perifericos
     PIE1bits.SSPIE = 0;             // Se inhabilita la interrupción del SPI
     PIE1bits.ADIE = 0;              // Se inhabilita la interrupción del ADC
     INTCONbits.TMR0IE = 0;          // Se inhabilitan las interrupciones del TMR0    
@@ -267,8 +265,26 @@ void setup(void){
     INTCONbits.T0IF = 0;            // Flag de TMR0 en 0
     
     //Configuración del Oscilador
-    OSCCONbits.IRCF = 0b110;        // 4MHz
+    OSCCONbits.IRCF = 0b111;        // 4MHz
     //OSCCONbits.IRCF = 0b011;        // 500kHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
+    
+    
+    
     I2C_Master_Init(100000);        // Inicializamso Comuncación I2C
+}
+
+void initUART(void){
+    
+    SPBRG = 12;                     // Baud rate (8MHz/9600)
+    //SPBRG = 35; 
+    TXSTAbits.SYNC = 0;             // Asíncrono 
+    RCSTAbits.SPEN = 1;             // Se habilita el módulo UART
+    TXSTAbits.TXEN = 1;             /* Transmisión habilitada; TXIF se enciende
+                                     automaticamente.*/
+    
+    PIR1bits.TXIF = 0;              // Apagamos la bandera de transmisión
+    
+    RCSTAbits.CREN = 1;             // Habilitamos la recepción
+    //BAUDCTLbits.BRG16 = 1;
 }
