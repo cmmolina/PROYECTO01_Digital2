@@ -607,34 +607,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 178:     duration = TMR1;
 [e = _duration -> _TMR1 `f ]
 "179
-[; ;main.c: 179:     distance_cm = duration/58.8;
+[; ;main.c: 179:     distance_cm = (duration/58.8);
 [e = _distance_cm -> / -> _duration `d .58.8 `f ]
-"181
-[; ;main.c: 181:     if (distance_cm < 5){
-[e $ ! < _distance_cm -> -> 5 `i `f 163  ]
-{
 "182
-[; ;main.c: 182:         proximity = 1;
-[e = _proximity -> -> 1 `i `ui ]
+[; ;main.c: 182:     if (distance_cm <= 14){
+[e $ ! <= _distance_cm -> -> 14 `i `f 163  ]
+{
 "183
-[; ;main.c: 183:     }
+[; ;main.c: 183:         proximity = 1;
+[e = _proximity -> -> 1 `i `ui ]
+"184
+[; ;main.c: 184:     }
 }
 [e $U 164  ]
-"184
-[; ;main.c: 184:     else{
+"185
+[; ;main.c: 185:     else{
 [e :U 163 ]
 {
-"185
-[; ;main.c: 185:         proximity = 0;
-[e = _proximity -> -> 0 `i `ui ]
 "186
-[; ;main.c: 186:     }
+[; ;main.c: 186:         proximity = 0;
+[e = _proximity -> -> 0 `i `ui ]
+"187
+[; ;main.c: 187:     }
 }
 [e :U 164 ]
-"188
-[; ;main.c: 188:     _delay((unsigned long)((100)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "189
-[; ;main.c: 189: }
+[; ;main.c: 189:     _delay((unsigned long)((100)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"190
+[; ;main.c: 190: }
 [e :UE 156 ]
 }

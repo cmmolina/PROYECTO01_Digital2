@@ -2685,7 +2685,7 @@ void I2C_Master_Init(const unsigned long c)
 {
     SSPCON = 0b00101000;
     SSPCON2 = 0;
-    SSPADD = (2000000/(4*c))-1;
+    SSPADD = (1000000/(4*c))-1;
     SSPSTAT = 0;
     TRISCbits.TRISC3 = 1;
     TRISCbits.TRISC4 = 1;

@@ -11,41 +11,42 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
+$C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
 config CONFIG 4 2007 2007 2 2 1
 $dist/default/production\Master.X.production.o
-cinit CODE 0 F F F 2 1
+cinit CODE 0 F F 19 2 1
 idloc IDLOC 5 2000 2000 4 2 1
-text1 CODE 0 3FD 3FD 33 2 1
-text2 CODE 0 390 390 38 2 1
-text3 CODE 0 1FF 1FF 68 2 1
-text4 CODE 0 504 504 10 2 1
-text5 CODE 0 354 354 3C 2 1
-text6 CODE 0 310 310 44 2 1
-text7 CODE 0 487 487 25 2 1
-text8 CODE 0 3C8 3C8 35 2 1
-text9 CODE 0 2C4 2C4 4C 2 1
-text10 CODE 0 267 267 5D 2 1
-text11 CODE 0 514 514 D 2 1
-text12 CODE 0 4EA 4EA 1A 2 1
-text13 CODE 0 4AC 4AC 22 2 1
-text14 CODE 0 52E 52E A 2 1
-text15 CODE 0 538 538 9 2 1
-text16 CODE 0 541 541 9 2 1
-text17 CODE 0 430 430 2E 2 1
-text18 CODE 0 521 521 D 2 1
-text19 CODE 0 45E 45E 29 2 1
-maintext CODE 0 1E 1E 1E1 2 1
+text1 CODE 0 49A 49A 33 2 1
+text2 CODE 0 42D 42D 38 2 1
+text3 CODE 0 29C 29C 68 2 1
+text4 CODE 0 5A1 5A1 10 2 1
+text5 CODE 0 3F1 3F1 3C 2 1
+text6 CODE 0 3AD 3AD 44 2 1
+text7 CODE 0 524 524 25 2 1
+text8 CODE 0 465 465 35 2 1
+text9 CODE 0 361 361 4C 2 1
+text10 CODE 0 304 304 5D 2 1
+text11 CODE 0 5B1 5B1 D 2 1
+text12 CODE 0 587 587 1A 2 1
+text13 CODE 0 549 549 22 2 1
+text14 CODE 0 5CB 5CB A 2 1
+text15 CODE 0 5D5 5D5 9 2 1
+text16 CODE 0 5DE 5DE 9 2 1
+text17 CODE 0 4CD 4CD 2E 2 1
+text18 CODE 0 5BE 5BE D 2 1
+text19 CODE 0 4FB 4FB 29 2 1
+idataCOMMON CODE 0 5EF 5EF 2 2 1
+maintext CODE 0 28 28 274 2 1
 cstackCOMMON COMMON 1 70 70 A 1 1
 cstackBANK0 BANK0 1 3C 3C 11 1 1
 intentry CODE 0 4 4 8 2 1
 bssBANK0 BANK0 1 20 20 1C 1 1
-strings STRING 0 4CE 4CE 1C 2 1
-clrtext CODE 0 54A 54A 8 2 1
-bssCOMMON COMMON 1 7A 7A 2 1 1
+strings STRING 0 56B 56B 1C 2 1
+dataCOMMON COMMON 1 7A 7A 2 1 1
+clrtext CODE 0 5E7 5E7 8 2 1
 config CONFIG 4 2007 2007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -62,11 +63,11 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 552-1FFF 2
+CONST 5F1-1FFF 2
 ENTRY 3-3 2
-ENTRY 552-1FFF 2
+ENTRY 5F1-1FFF 2
 CODE 3-3 2
-CODE 552-1FFF 2
+CODE 5F1-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -74,9 +75,9 @@ SFR3 180-18F 1
 COMMON 7C-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 552-1FFF 2
+STRCODE 5F1-1FFF 2
 STRING 3-3 2
-STRING 552-1FFF 2
+STRING 5F1-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -91,344 +92,363 @@ STRING 552-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Master.X.production.o
-F cinit CODE >904:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-F cinit CODE >907:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-F cinit CODE >972:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-10 cinit CODE >973:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-11 cinit CODE >976:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-12 cinit CODE >977:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-13 cinit CODE >978:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-14 cinit CODE >979:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-15 cinit CODE >980:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-1A cinit CODE >986:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-1A cinit CODE >988:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-1B cinit CODE >989:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
+F cinit CODE >912:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+F cinit CODE >915:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+F cinit CODE >968:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+14 cinit CODE >969:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+15 cinit CODE >970:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+1A cinit CODE >971:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+1B cinit CODE >990:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+1C cinit CODE >991:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+1D cinit CODE >992:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+1E cinit CODE >993:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+1F cinit CODE >994:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+24 cinit CODE >1000:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+24 cinit CODE >1002:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+25 cinit CODE >1003:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
 4 intentry CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-45E text19 CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-45E text19 CODE >84:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-464 text19 CODE >85:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-465 text19 CODE >86:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-465 text19 CODE >89:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-469 text19 CODE >90:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-46A text19 CODE >91:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-46A text19 CODE >94:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-46E text19 CODE >95:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-46F text19 CODE >96:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-46F text19 CODE >99:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-473 text19 CODE >100:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-474 text19 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-474 text19 CODE >104:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-478 text19 CODE >105:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-47A text19 CODE >106:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-47B text19 CODE >110:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-47F text19 CODE >111:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-480 text19 CODE >113:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-521 text18 CODE >29:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-521 text18 CODE >31:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-52D text18 CODE >32:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-430 text17 CODE >71:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-430 text17 CODE >74:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-435 text17 CODE >75:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-438 text17 CODE >76:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-43D text17 CODE >77:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-446 text17 CODE >78:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-44B text17 CODE >79:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-451 text17 CODE >80:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-454 text17 CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-455 text17 CODE >82:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-458 text17 CODE >83:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-458 text17 CODE >84:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-459 text17 CODE >85:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-45D text17 CODE >86:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-541 text16 CODE >36:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-541 text16 CODE >38:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-546 text16 CODE >39:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-549 text16 CODE >40:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-538 text15 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-538 text15 CODE >54:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-53D text15 CODE >55:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-540 text15 CODE >56:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-52E text14 CODE >62:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-52E text14 CODE >64:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-533 text14 CODE >65:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-537 text14 CODE >66:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-4AC text13 CODE >13:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4AD text13 CODE >14:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4B1 text13 CODE >15:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4B5 text13 CODE >16:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4B5 text13 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4B8 text13 CODE >19:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4BC text13 CODE >20:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4BE text13 CODE >21:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4BE text13 CODE >22:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4BF text13 CODE >24:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4C3 text13 CODE >25:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4C5 text13 CODE >26:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4C5 text13 CODE >27:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4C6 text13 CODE >29:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4CA text13 CODE >30:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4CC text13 CODE >31:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4CC text13 CODE >32:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4CD text13 CODE >33:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4EA text12 CODE >35:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4EB text12 CODE >36:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4EE text12 CODE >37:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4F4 text12 CODE >38:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4F7 text12 CODE >39:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-500 text12 CODE >40:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-503 text12 CODE >41:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-514 text11 CODE >43:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-514 text11 CODE >44:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-51A text11 CODE >45:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-520 text11 CODE >46:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-267 text10 CODE >65:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-267 text10 CODE >66:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-26D text10 CODE >67:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-276 text10 CODE >68:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-27C text10 CODE >69:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-285 text10 CODE >70:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-28B text10 CODE >71:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-293 text10 CODE >72:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-299 text10 CODE >74:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-29F text10 CODE >75:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2A5 text10 CODE >76:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2AB text10 CODE >77:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2B1 text10 CODE >78:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2B7 text10 CODE >79:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2BD text10 CODE >80:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2C3 text10 CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2C4 text9 CODE >48:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2C7 text9 CODE >50:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2CC text9 CODE >51:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2CF text9 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2D2 text9 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2D5 text9 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2D9 text9 CODE >53:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2DC text9 CODE >54:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2E2 text9 CODE >55:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2EA text9 CODE >56:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2F1 text9 CODE >57:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2F4 text9 CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2F7 text9 CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2FA text9 CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-2FE text9 CODE >59:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-301 text9 CODE >60:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-307 text9 CODE >61:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-30F text9 CODE >63:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3C8 text8 CODE >83:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3C9 text8 CODE >85:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3CC text8 CODE >86:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3CF text8 CODE >87:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3D2 text8 CODE >88:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3D5 text8 CODE >88:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3D8 text8 CODE >88:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3E0 text8 CODE >89:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3E3 text8 CODE >90:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3E8 text8 CODE >91:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3EB text8 CODE >92:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3F1 text8 CODE >93:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3F4 text8 CODE >94:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3F9 text8 CODE >95:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-3FC text8 CODE >96:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-487 text7 CODE >98:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-488 text7 CODE >100:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-48B text7 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-49A text7 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4A7 text7 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-4AB text7 CODE >102:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
-310 text6 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-310 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-312 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-318 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-31A text6 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-31B text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-31C text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-320 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-322 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-326 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-32A text6 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-32B text6 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-32F text6 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-331 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-333 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-337 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-33B text6 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-33E text6 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-341 text6 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-342 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-343 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-347 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-349 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-34F text6 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-353 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
-354 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-354 text5 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-35C text5 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-35E text5 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-35F text5 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-360 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-364 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-366 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-36A text5 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-36E text5 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-370 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-374 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-378 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-37B text5 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-37E text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-37F text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-383 text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-385 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-38B text5 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-38F text5 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
-504 text4 CODE >277:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-504 text4 CODE >279:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-508 text4 CODE >281:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-509 text4 CODE >282:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-50C text4 CODE >283:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-50F text4 CODE >286:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-512 text4 CODE >288:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-513 text4 CODE >290:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1FF text3 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-1FF text3 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-209 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-20D text3 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-211 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-213 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-214 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-216 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-21D text3 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-221 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-225 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-227 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-22E text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-230 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-234 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-238 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-23C text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-240 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-243 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-247 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-24B text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-24E text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-24F text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-250 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-256 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-258 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-25E text3 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-266 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
-390 text2 CODE >13:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-390 text2 CODE >15:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-394 text2 CODE >16:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-397 text2 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3A2 text2 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3A8 text2 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3C4 text2 CODE >18:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3C5 text2 CODE >19:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3C6 text2 CODE >20:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3C7 text2 CODE >21:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
-3FD text1 CODE >226:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-3FD text1 CODE >229:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-400 text1 CODE >230:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-401 text1 CODE >233:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-404 text1 CODE >234:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-405 text1 CODE >236:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-406 text1 CODE >237:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-407 text1 CODE >239:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-40A text1 CODE >240:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-40B text1 CODE >242:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-40C text1 CODE >243:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-40D text1 CODE >245:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-410 text1 CODE >256:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-411 text1 CODE >257:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-412 text1 CODE >258:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-413 text1 CODE >259:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-414 text1 CODE >260:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-415 text1 CODE >262:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-418 text1 CODE >263:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-419 text1 CODE >264:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-41A text1 CODE >265:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-41B text1 CODE >268:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-41F text1 CODE >270:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-420 text1 CODE >274:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-42F text1 CODE >275:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1E maintext CODE >118:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1E maintext CODE >119:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-2C maintext CODE >121:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-31 maintext CODE >122:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-36 maintext CODE >123:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-3C maintext CODE >124:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-41 maintext CODE >125:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-46 maintext CODE >128:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-4B maintext CODE >129:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-54 maintext CODE >130:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-62 maintext CODE >131:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-67 maintext CODE >132:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-75 maintext CODE >134:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-7A maintext CODE >135:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-83 maintext CODE >136:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-91 maintext CODE >137:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-96 maintext CODE >138:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-A4 maintext CODE >141:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-A9 maintext CODE >142:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-B2 maintext CODE >143:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-C0 maintext CODE >144:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-C5 maintext CODE >145:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-D3 maintext CODE >148:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-DB maintext CODE >149:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-E1 maintext CODE >150:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-E9 maintext CODE >151:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-EF maintext CODE >152:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-F7 maintext CODE >153:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-FD maintext CODE >156:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-105 maintext CODE >157:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-10E maintext CODE >160:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-116 maintext CODE >161:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-11F maintext CODE >164:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-141 maintext CODE >165:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-152 maintext CODE >167:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-15A maintext CODE >168:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-163 maintext CODE >169:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-16C maintext CODE >170:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-172 maintext CODE >171:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-178 maintext CODE >174:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-18C maintext CODE >175:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-18D maintext CODE >176:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-18E maintext CODE >177:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-19D maintext CODE >178:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1A0 maintext CODE >179:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1A1 maintext CODE >180:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1A5 maintext CODE >181:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1A9 maintext CODE >184:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1B1 maintext CODE >184:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1B5 maintext CODE >184:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1B9 maintext CODE >185:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1BA maintext CODE >186:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1BB maintext CODE >187:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1CA maintext CODE >188:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1CD maintext CODE >189:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1CE maintext CODE >190:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1D0 maintext CODE >195:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1D6 maintext CODE >196:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1D8 maintext CODE >197:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1D9 maintext CODE >198:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1DD maintext CODE >199:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1DE maintext CODE >201:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1E5 maintext CODE >202:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1E7 maintext CODE >203:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1E8 maintext CODE >204:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1EC maintext CODE >205:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-1EC maintext CODE >216:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
-54A clrtext CODE >959:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54A clrtext CODE >960:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54B clrtext CODE >961:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54B clrtext CODE >962:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54C clrtext CODE >963:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54D clrtext CODE >964:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54E clrtext CODE >965:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-54F clrtext CODE >966:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-550 clrtext CODE >967:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
-551 clrtext CODE >968:C:\Users\carlo\AppData\Local\Temp\xcAspb4.s
+4FB text19 CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4FB text19 CODE >84:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+501 text19 CODE >85:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+502 text19 CODE >86:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+502 text19 CODE >89:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+506 text19 CODE >90:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+507 text19 CODE >91:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+507 text19 CODE >94:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+50B text19 CODE >95:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+50C text19 CODE >96:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+50C text19 CODE >99:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+510 text19 CODE >100:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+511 text19 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+511 text19 CODE >104:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+515 text19 CODE >105:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+517 text19 CODE >106:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+518 text19 CODE >110:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+51C text19 CODE >111:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+51D text19 CODE >113:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5BE text18 CODE >29:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5BE text18 CODE >31:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5CA text18 CODE >32:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4CD text17 CODE >71:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4CD text17 CODE >74:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4D2 text17 CODE >75:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4D5 text17 CODE >76:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4DA text17 CODE >77:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4E3 text17 CODE >78:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4E8 text17 CODE >79:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4EE text17 CODE >80:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4F1 text17 CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4F2 text17 CODE >82:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4F5 text17 CODE >83:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4F5 text17 CODE >84:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4F6 text17 CODE >85:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+4FA text17 CODE >86:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5DE text16 CODE >36:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5DE text16 CODE >38:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5E3 text16 CODE >39:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5E6 text16 CODE >40:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5D5 text15 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5D5 text15 CODE >54:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5DA text15 CODE >55:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5DD text15 CODE >56:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5CB text14 CODE >62:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5CB text14 CODE >64:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5D0 text14 CODE >65:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+5D4 text14 CODE >66:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+549 text13 CODE >13:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+54A text13 CODE >14:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+54E text13 CODE >15:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+552 text13 CODE >16:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+552 text13 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+555 text13 CODE >19:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+559 text13 CODE >20:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+55B text13 CODE >21:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+55B text13 CODE >22:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+55C text13 CODE >24:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+560 text13 CODE >25:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+562 text13 CODE >26:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+562 text13 CODE >27:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+563 text13 CODE >29:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+567 text13 CODE >30:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+569 text13 CODE >31:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+569 text13 CODE >32:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+56A text13 CODE >33:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+587 text12 CODE >35:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+588 text12 CODE >36:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+58B text12 CODE >37:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+591 text12 CODE >38:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+594 text12 CODE >39:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+59D text12 CODE >40:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+5A0 text12 CODE >41:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+5B1 text11 CODE >43:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+5B1 text11 CODE >44:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+5B7 text11 CODE >45:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+5BD text11 CODE >46:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+304 text10 CODE >65:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+304 text10 CODE >66:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+30A text10 CODE >67:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+313 text10 CODE >68:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+319 text10 CODE >69:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+322 text10 CODE >70:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+328 text10 CODE >71:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+330 text10 CODE >72:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+336 text10 CODE >74:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+33C text10 CODE >75:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+342 text10 CODE >76:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+348 text10 CODE >77:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+34E text10 CODE >78:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+354 text10 CODE >79:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+35A text10 CODE >80:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+360 text10 CODE >81:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+361 text9 CODE >48:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+364 text9 CODE >50:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+369 text9 CODE >51:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+36C text9 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+36F text9 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+372 text9 CODE >52:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+376 text9 CODE >53:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+379 text9 CODE >54:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+37F text9 CODE >55:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+387 text9 CODE >56:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+38E text9 CODE >57:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+391 text9 CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+394 text9 CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+397 text9 CODE >58:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+39B text9 CODE >59:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+39E text9 CODE >60:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+3A4 text9 CODE >61:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+3AC text9 CODE >63:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+465 text8 CODE >83:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+466 text8 CODE >85:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+469 text8 CODE >86:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+46C text8 CODE >87:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+46F text8 CODE >88:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+472 text8 CODE >88:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+475 text8 CODE >88:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+47D text8 CODE >89:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+480 text8 CODE >90:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+485 text8 CODE >91:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+488 text8 CODE >92:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+48E text8 CODE >93:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+491 text8 CODE >94:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+496 text8 CODE >95:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+499 text8 CODE >96:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+524 text7 CODE >98:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+525 text7 CODE >100:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+528 text7 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+537 text7 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+544 text7 CODE >101:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+548 text7 CODE >102:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\LCD.c
+3AD text6 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3AD text6 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3AF text6 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3B5 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3B7 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3B8 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3B9 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3BD text6 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3BF text6 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3C3 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3C7 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3C8 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3CC text6 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3CE text6 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3D0 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3D4 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3D8 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3DB text6 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3DE text6 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3DF text6 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3E0 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3E4 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3E6 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3EC text6 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3F0 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwdiv.c
+3F1 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+3F1 text5 CODE >12:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+3F9 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+3FB text5 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+3FC text5 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+3FD text5 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+401 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+403 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+407 text5 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+40B text5 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+40D text5 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+411 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+415 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+418 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+41B text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+41C text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+420 text5 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+422 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+428 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+42C text5 CODE >25:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\lwmod.c
+5A1 text4 CODE >319:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5A1 text4 CODE >321:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5A5 text4 CODE >323:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5A6 text4 CODE >324:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5A9 text4 CODE >325:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5AC text4 CODE >328:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5AF text4 CODE >330:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5B0 text4 CODE >332:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+29C text3 CODE >5:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+29C text3 CODE >13:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2A6 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2AA text3 CODE >14:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2AE text3 CODE >15:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2B0 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2B1 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2B3 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2BA text3 CODE >18:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2BE text3 CODE >16:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2C2 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2C4 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2CB text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2CD text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2D1 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2D5 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2D9 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2DD text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2E0 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2E4 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2E8 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2EB text3 CODE >24:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2EC text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2ED text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2F3 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2F5 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+2FB text3 CODE >29:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+303 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\__lldiv.c
+42D text2 CODE >13:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+42D text2 CODE >15:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+431 text2 CODE >16:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+434 text2 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+43F text2 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+445 text2 CODE >17:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+461 text2 CODE >18:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+462 text2 CODE >19:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+463 text2 CODE >20:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+464 text2 CODE >21:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\IIC.c
+49A text1 CODE >268:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+49A text1 CODE >271:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+49D text1 CODE >272:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+49E text1 CODE >275:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A1 text1 CODE >276:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A2 text1 CODE >278:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A3 text1 CODE >279:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A4 text1 CODE >281:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A7 text1 CODE >282:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A8 text1 CODE >284:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4A9 text1 CODE >285:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4AA text1 CODE >287:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4AD text1 CODE >298:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4AE text1 CODE >299:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4AF text1 CODE >300:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B0 text1 CODE >301:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B1 text1 CODE >302:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B2 text1 CODE >304:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B5 text1 CODE >305:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B6 text1 CODE >306:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B7 text1 CODE >307:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B8 text1 CODE >310:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4BC text1 CODE >312:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4BD text1 CODE >316:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4CC text1 CODE >317:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+28 maintext CODE >118:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+28 maintext CODE >119:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+36 maintext CODE >121:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+3B maintext CODE >122:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+40 maintext CODE >123:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+46 maintext CODE >124:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+4B maintext CODE >125:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+50 maintext CODE >128:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+55 maintext CODE >129:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5E maintext CODE >130:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+6C maintext CODE >131:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+71 maintext CODE >132:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+7F maintext CODE >134:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+84 maintext CODE >135:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+8D maintext CODE >136:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+9B maintext CODE >137:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+A0 maintext CODE >138:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+AE maintext CODE >141:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+B3 maintext CODE >142:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+BC maintext CODE >143:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+CA maintext CODE >144:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+CF maintext CODE >145:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+DD maintext CODE >148:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+E5 maintext CODE >149:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+EB maintext CODE >150:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+F3 maintext CODE >151:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+F9 maintext CODE >152:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+101 maintext CODE >153:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+107 maintext CODE >156:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+10F maintext CODE >157:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+118 maintext CODE >160:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+120 maintext CODE >161:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+129 maintext CODE >164:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+14B maintext CODE >165:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+15C maintext CODE >167:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+164 maintext CODE >168:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+16D maintext CODE >169:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+176 maintext CODE >170:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+17C maintext CODE >171:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+182 maintext CODE >195:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+190 maintext CODE >196:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+19E maintext CODE >197:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1A1 maintext CODE >198:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1A2 maintext CODE >199:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1AD maintext CODE >200:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1B0 maintext CODE >201:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1B1 maintext CODE >203:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1B2 maintext CODE >204:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1B7 maintext CODE >205:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1C0 maintext CODE >206:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1CE maintext CODE >207:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1D3 maintext CODE >208:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1E2 maintext CODE >210:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1E7 maintext CODE >211:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1F0 maintext CODE >212:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+1FE maintext CODE >213:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+203 maintext CODE >214:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+211 maintext CODE >217:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+216 maintext CODE >218:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+21F maintext CODE >219:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+22D maintext CODE >220:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+232 maintext CODE >221:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+240 maintext CODE >203:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+248 maintext CODE >223:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+257 maintext CODE >224:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+25A maintext CODE >225:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+25B maintext CODE >226:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+266 maintext CODE >227:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+269 maintext CODE >228:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+26A maintext CODE >229:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+26B maintext CODE >231:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+26B maintext CODE >232:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+26C maintext CODE >233:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+26D maintext CODE >237:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+273 maintext CODE >238:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+275 maintext CODE >239:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+276 maintext CODE >240:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+27A maintext CODE >241:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+27B maintext CODE >243:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+282 maintext CODE >244:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+284 maintext CODE >245:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+285 maintext CODE >246:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+289 maintext CODE >247:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+289 maintext CODE >258:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Master.X\main.c
+5E7 clrtext CODE >977:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5E7 clrtext CODE >978:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5E8 clrtext CODE >979:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5E8 clrtext CODE >980:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5E9 clrtext CODE >981:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5EA clrtext CODE >982:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5EB clrtext CODE >983:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5EC clrtext CODE >984:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5ED clrtext CODE >985:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
+5EE clrtext CODE >986:C:\Users\carlo\AppData\Local\Temp\xcAs106s.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -445,80 +465,81 @@ _i 2E 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\Master.X.production.o
 ___lwmod@counter 41 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 _espacios 36 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
-__Hspace_0 552 0 ABS 0 - -
+__Hspace_0 5F1 0 ABS 0 - -
 __Hspace_1 7C 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
-_Lcd_Init 4CE 0 CODE 0 text10 dist/default/production\Master.X.production.o
-_Lcd_Port 958 0 CODE 0 text13 dist/default/production\Master.X.production.o
+_Lcd_Init 608 0 CODE 0 text10 dist/default/production\Master.X.production.o
+_Lcd_Port A92 0 CODE 0 text13 dist/default/production\Master.X.production.o
 I2C_Master_Init@c 42 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_Lcd_Init 588 0 CODE 0 text10 dist/default/production\Master.X.production.o
-__end_of_Lcd_Port 99C 0 CODE 0 text13 dist/default/production\Master.X.production.o
+__end_of_Lcd_Init 6C2 0 CODE 0 text10 dist/default/production\Master.X.production.o
+__end_of_Lcd_Port AD6 0 CODE 0 text13 dist/default/production\Master.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Master.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-_flag 30 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
-_main 3C 0 CODE 0 maintext dist/default/production\Master.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+_main 50 0 CODE 0 maintext dist/default/production\Master.X.production.o
 _ones 3A 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
 _tens 3B 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Master.X.production.o
-_Lcd_Write_Char 790 0 CODE 0 text8 dist/default/production\Master.X.production.o
-start 18 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
+_Lcd_Write_Char 8CA 0 CODE 0 text8 dist/default/production\Master.X.production.o
+start 18 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
 Lcd_Port@a 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
 Lcd_Write_Char@temp 74 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 I2C_Master_Read@a 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
-_initUART A08 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__HdataCOMMON 0 0 ABS 0 dataCOMMON -
+intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+_initUART B42 0 CODE 0 text4 dist/default/production\Master.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Master.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 I2C_Master_Read@temp 76 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_initUART A28 0 CODE 0 text4 dist/default/production\Master.X.production.o
-__end_of_Lcd_Write_Char 7FA 0 CODE 0 text8 dist/default/production\Master.X.production.o
+__end_of_initUART B62 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__pidataCOMMON BDE 0 CODE 0 idataCOMMON dist/default/production\Master.X.production.o
+__end_of_Lcd_Write_Char 934 0 CODE 0 text8 dist/default/production\Master.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Master.X.production.o
+__LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
 ___lwmod@divisor 3C 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
-__end_of___lldiv 4CE 0 CODE 0 text3 dist/default/production\Master.X.production.o
-__end_of___lwdiv 6A8 0 CODE 0 text6 dist/default/production\Master.X.production.o
-__end_of___lwmod 720 0 CODE 0 text5 dist/default/production\Master.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
+__end_of___lldiv 608 0 CODE 0 text3 dist/default/production\Master.X.production.o
+__end_of___lwdiv 7E2 0 CODE 0 text6 dist/default/production\Master.X.production.o
+__end_of___lwmod 85A 0 CODE 0 text5 dist/default/production\Master.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
 ___lwdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
+__LidataCOMMON 0 0 ABS 0 idataCOMMON -
 Lcd_Set_Cursor@temp 3F 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 ___lwmod@dividend 3E 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 ___lldiv@counter 41 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Master.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\Master.X.production.o
 ___lldiv@dividend 76 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
-_Lcd_Write_String 90E 0 CODE 0 text7 dist/default/production\Master.X.production.o
-clear_ram0 A94 0 CODE 0 clrtext dist/default/production\Master.X.production.o
+_Lcd_Write_String A48 0 CODE 0 text7 dist/default/production\Master.X.production.o
+clear_ram0 BCE 0 CODE 0 clrtext dist/default/production\Master.X.production.o
 __pcstackBANK0 3C 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\Master.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Master.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
+___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 3C 0 CODE 0 cinit -
+__Hcinit 50 0 CODE 0 cinit -
 __Hidloc 4008 0 IDLOC 5 idloc -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 9A6 0 STRING 0 strings dist/default/production\Master.X.production.o
+__stringbase AE0 0 STRING 0 strings dist/default/production\Master.X.production.o
 ___lwdiv@counter 79 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 I2C_Master_Write@d 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
@@ -558,67 +579,66 @@ _RD4 44 0 ABS 0 - dist/default/production\Master.X.production.o
 _RD5 45 0 ABS 0 - dist/default/production\Master.X.production.o
 _RD6 46 0 ABS 0 - dist/default/production\Master.X.production.o
 _RD7 47 0 ABS 0 - dist/default/production\Master.X.production.o
-__S0 552 0 ABS 0 - -
+__S0 5F1 0 ABS 0 - -
 __S1 7C 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 8BC 0 CODE 0 text19 dist/default/production\Master.X.production.o
+_isr 9F6 0 CODE 0 text19 dist/default/production\Master.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Master.X.production.o
-_I2C_Master_Start A82 0 CODE 0 text16 dist/default/production\Master.X.production.o
-_I2C_Master_Write A5C 0 CODE 0 text14 dist/default/production\Master.X.production.o
-__end_of_Lcd_Write_String 958 0 CODE 0 text7 dist/default/production\Master.X.production.o
-__end_of_isr 90E 0 CODE 0 text19 dist/default/production\Master.X.production.o
-__end_of_Lcd_Clear A42 0 CODE 0 text11 dist/default/production\Master.X.production.o
+_I2C_Master_Start BBC 0 CODE 0 text16 dist/default/production\Master.X.production.o
+__HidataCOMMON 0 0 ABS 0 idataCOMMON -
+_I2C_Master_Write B96 0 CODE 0 text14 dist/default/production\Master.X.production.o
+__end_of_Lcd_Write_String A92 0 CODE 0 text7 dist/default/production\Master.X.production.o
+__end_of_isr A48 0 CODE 0 text19 dist/default/production\Master.X.production.o
+__end_of_Lcd_Clear B7C 0 CODE 0 text11 dist/default/production\Master.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
-__stringtab 99C 0 STRING 0 strings dist/default/production\Master.X.production.o
+__stringtab AD6 0 STRING 0 strings dist/default/production\Master.X.production.o
 Lcd_Write_String@a 79 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 Lcd_Write_String@i 77 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 _proximidad 38 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAspb4.o
-__end_of_Lcd_Cmd A08 0 CODE 0 text12 dist/default/production\Master.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAs106s.o
+__end_of_Lcd_Cmd B42 0 CODE 0 text12 dist/default/production\Master.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Master.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Master.X.production.o
-__ptext10 4CE 0 CODE 0 text10 dist/default/production\Master.X.production.o
-__ptext11 A28 0 CODE 0 text11 dist/default/production\Master.X.production.o
-__ptext12 9D4 0 CODE 0 text12 dist/default/production\Master.X.production.o
-__ptext13 958 0 CODE 0 text13 dist/default/production\Master.X.production.o
-__ptext14 A5C 0 CODE 0 text14 dist/default/production\Master.X.production.o
-__ptext15 A70 0 CODE 0 text15 dist/default/production\Master.X.production.o
-__ptext16 A82 0 CODE 0 text16 dist/default/production\Master.X.production.o
-__ptext17 860 0 CODE 0 text17 dist/default/production\Master.X.production.o
-__ptext18 A42 0 CODE 0 text18 dist/default/production\Master.X.production.o
-__ptext19 8BC 0 CODE 0 text19 dist/default/production\Master.X.production.o
-_Lcd_Clear A28 0 CODE 0 text11 dist/default/production\Master.X.production.o
-_Lcd_Set_Cursor 588 0 CODE 0 text9 dist/default/production\Master.X.production.o
-_espacios_comp 34 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
-___lldiv 3FE 0 CODE 0 text3 dist/default/production\Master.X.production.o
-___lwdiv 620 0 CODE 0 text6 dist/default/production\Master.X.production.o
-___lwmod 6A8 0 CODE 0 text5 dist/default/production\Master.X.production.o
-__pmaintext 3C 0 CODE 0 maintext dist/default/production\Master.X.production.o
+__ptext10 608 0 CODE 0 text10 dist/default/production\Master.X.production.o
+__ptext11 B62 0 CODE 0 text11 dist/default/production\Master.X.production.o
+__ptext12 B0E 0 CODE 0 text12 dist/default/production\Master.X.production.o
+__ptext13 A92 0 CODE 0 text13 dist/default/production\Master.X.production.o
+__ptext14 B96 0 CODE 0 text14 dist/default/production\Master.X.production.o
+__ptext15 BAA 0 CODE 0 text15 dist/default/production\Master.X.production.o
+__ptext16 BBC 0 CODE 0 text16 dist/default/production\Master.X.production.o
+__ptext17 99A 0 CODE 0 text17 dist/default/production\Master.X.production.o
+__ptext18 B7C 0 CODE 0 text18 dist/default/production\Master.X.production.o
+__ptext19 9F6 0 CODE 0 text19 dist/default/production\Master.X.production.o
+_Lcd_Clear B62 0 CODE 0 text11 dist/default/production\Master.X.production.o
+_Lcd_Set_Cursor 6C2 0 CODE 0 text9 dist/default/production\Master.X.production.o
+___lldiv 538 0 CODE 0 text3 dist/default/production\Master.X.production.o
+___lwdiv 75A 0 CODE 0 text6 dist/default/production\Master.X.production.o
+___lwmod 7E2 0 CODE 0 text5 dist/default/production\Master.X.production.o
+__pmaintext 50 0 CODE 0 maintext dist/default/production\Master.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 ___lwdiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 ?_I2C_Master_Read 72 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
-__end_of_I2C_Master_Init 790 0 CODE 0 text2 dist/default/production\Master.X.production.o
-__end_of_I2C_Master_Read 8BC 0 CODE 0 text17 dist/default/production\Master.X.production.o
-__end_of_I2C_Master_Stop A82 0 CODE 0 text15 dist/default/production\Master.X.production.o
-__end_of_I2C_Master_Wait A5C 0 CODE 0 text18 dist/default/production\Master.X.production.o
-__end_of__stringtab 9A8 0 STRING 0 strings dist/default/production\Master.X.production.o
-__end_of_I2C_Master_Start A94 0 CODE 0 text16 dist/default/production\Master.X.production.o
+__end_of_I2C_Master_Init 8CA 0 CODE 0 text2 dist/default/production\Master.X.production.o
+__end_of_I2C_Master_Read 9F6 0 CODE 0 text17 dist/default/production\Master.X.production.o
+__end_of_I2C_Master_Stop BBC 0 CODE 0 text15 dist/default/production\Master.X.production.o
+__end_of_I2C_Master_Wait B96 0 CODE 0 text18 dist/default/production\Master.X.production.o
+__end_of__stringtab AE2 0 STRING 0 strings dist/default/production\Master.X.production.o
+__end_of_I2C_Master_Start BCE 0 CODE 0 text16 dist/default/production\Master.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write A70 0 CODE 0 text14 dist/default/production\Master.X.production.o
-__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\Master.X.production.o
+__end_of_I2C_Master_Write BAA 0 CODE 0 text14 dist/default/production\Master.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\Master.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 34 0 CODE 0 cinit dist/default/production\Master.X.production.o
-__end_of_Lcd_Set_Cursor 620 0 CODE 0 text9 dist/default/production\Master.X.production.o
+end_of_initialization 48 0 CODE 0 cinit dist/default/production\Master.X.production.o
+__end_of_Lcd_Set_Cursor 75A 0 CODE 0 text9 dist/default/production\Master.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
 Lcd_Set_Cursor@a 3C 0 BANK0 1 cstackBANK0 dist/default/production\Master.X.production.o
 Lcd_Set_Cursor@b 76 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
@@ -632,23 +652,23 @@ ___lwdiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.pr
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\Master.X.production.o
-__ptext1 7FA 0 CODE 0 text1 dist/default/production\Master.X.production.o
-__ptext2 720 0 CODE 0 text2 dist/default/production\Master.X.production.o
-__ptext3 3FE 0 CODE 0 text3 dist/default/production\Master.X.production.o
-__ptext4 A08 0 CODE 0 text4 dist/default/production\Master.X.production.o
-__ptext5 6A8 0 CODE 0 text5 dist/default/production\Master.X.production.o
-__ptext6 620 0 CODE 0 text6 dist/default/production\Master.X.production.o
-__ptext7 90E 0 CODE 0 text7 dist/default/production\Master.X.production.o
-__ptext8 790 0 CODE 0 text8 dist/default/production\Master.X.production.o
-__ptext9 588 0 CODE 0 text9 dist/default/production\Master.X.production.o
+__ptext1 934 0 CODE 0 text1 dist/default/production\Master.X.production.o
+__ptext2 85A 0 CODE 0 text2 dist/default/production\Master.X.production.o
+__ptext3 538 0 CODE 0 text3 dist/default/production\Master.X.production.o
+__ptext4 B42 0 CODE 0 text4 dist/default/production\Master.X.production.o
+__ptext5 7E2 0 CODE 0 text5 dist/default/production\Master.X.production.o
+__ptext6 75A 0 CODE 0 text6 dist/default/production\Master.X.production.o
+__ptext7 A48 0 CODE 0 text7 dist/default/production\Master.X.production.o
+__ptext8 8CA 0 CODE 0 text8 dist/default/production\Master.X.production.o
+__ptext9 6C2 0 CODE 0 text9 dist/default/production\Master.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init 720 0 CODE 0 text2 dist/default/production\Master.X.production.o
-_I2C_Master_Read 860 0 CODE 0 text17 dist/default/production\Master.X.production.o
-_I2C_Master_Stop A70 0 CODE 0 text15 dist/default/production\Master.X.production.o
-_I2C_Master_Wait A42 0 CODE 0 text18 dist/default/production\Master.X.production.o
+_I2C_Master_Init 85A 0 CODE 0 text2 dist/default/production\Master.X.production.o
+_I2C_Master_Read 99A 0 CODE 0 text17 dist/default/production\Master.X.production.o
+_I2C_Master_Stop BAA 0 CODE 0 text15 dist/default/production\Master.X.production.o
+_I2C_Master_Wait B7C 0 CODE 0 text18 dist/default/production\Master.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 34 0 CODE 0 cinit dist/default/production\Master.X.production.o
+__end_of__initialization 48 0 CODE 0 cinit dist/default/production\Master.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 Lcd_Cmd@a 75 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -658,7 +678,7 @@ _TXSTAbits 98 0 ABS 0 - dist/default/production\Master.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\Master.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Master.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 3FE 0 CODE 0 maintext dist/default/production\Master.X.production.o
+__end_of_main 538 0 CODE 0 maintext dist/default/production\Master.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Master.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Master.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Master.X.production.o
@@ -672,17 +692,18 @@ _TRISB 86 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\Master.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\Master.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\Master.X.production.o
-__end_of_setup 860 0 CODE 0 text1 dist/default/production\Master.X.production.o
+__end_of_setup 99A 0 CODE 0 text1 dist/default/production\Master.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Master.X.production.o
-_setup 7FA 0 CODE 0 text1 dist/default/production\Master.X.production.o
-_temperatura 32 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
+_setup 934 0 CODE 0 text1 dist/default/production\Master.X.production.o
+_temperatura 34 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Master.X.production.o
-_Lcd_Cmd 9D4 0 CODE 0 text12 dist/default/production\Master.X.production.o
+_Lcd_Cmd B0E 0 CODE 0 text12 dist/default/production\Master.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\Master.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\Master.X.production.o
-__pstrings 99C 0 STRING 0 strings dist/default/production\Master.X.production.o
+__pdataCOMMON 7A 0 COMMON 1 dataCOMMON dist/default/production\Master.X.production.o
+__pstrings AD6 0 STRING 0 strings dist/default/production\Master.X.production.o
 Lcd_Write_Char@a 76 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 Lcd_Write_Char@y 75 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.production.o
 # %SPLITSTAB Section
@@ -710,12 +731,12 @@ Lcd_Write_Char@y 75 0 COMMON 1 cstackCOMMON dist/default/production\Master.X.pro
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text12 0 4EA 9D4 68 2
+text12 0 587 B0E 6A 2
 cstackCOMMON 1 70 70 C 1
-intentry 0 4 8 4CA 2
+intentry 0 4 8 567 2
 reset_vec 0 0 0 3 2
 bssBANK0 1 20 20 2D 1
-strings 0 4CE 99C 1C 2
+strings 0 56B AD6 1C 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

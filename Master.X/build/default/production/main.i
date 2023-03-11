@@ -2812,7 +2812,7 @@ void I2C_Slave_Init(uint8_t address);
 # 51 "main.c"
 unsigned int proximidad;
 unsigned int espacios;
-unsigned int espacios_comp;
+unsigned int espacios_comp=3;
 unsigned int temperatura;
 unsigned int cont;
 unsigned int flag = 0;
@@ -2931,27 +2931,47 @@ void main(void) {
         Lcd_Write_Char(ones+48);
         Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
-
-
-        if (proximidad == 1 && (espacios>0) && (flag != 1) ){
-            PORTBbits.RB7 = 1;
-            PORTBbits.RB6 = 0;
-            _delay((unsigned long)((100)*(8000000/4000.0)));
-            PORTBbits.RB7 = 0;
-            PORTBbits.RB6 = 0;
-            espacios_comp = espacios;
-            flag = 1;
-        }
-
-        if (proximidad == 0 && (espacios != espacios_comp)){
+# 195 "main.c"
+        if (proximidad == 1 && espacios>0){
+            _delay((unsigned long)((250)*(8000000/4000.0)));
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 1;
-            _delay((unsigned long)((100)*(8000000/4000.0)));
+            _delay((unsigned long)((13)*(8000000/4000.0)));
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 0;
-            flag = 0;
+
+            while (proximidad){
+                I2C_Master_Start();
+                I2C_Master_Write(0x51);
+                proximidad = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                _delay((unsigned long)((200)*(8000000/4000.0)));
+
+                I2C_Master_Start();
+                I2C_Master_Write(0x101);
+                espacios = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                _delay((unsigned long)((250)*(8000000/4000.0)));
+
+
+                I2C_Master_Start();
+                I2C_Master_Write(0x111);
+                temperatura = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                _delay((unsigned long)((250)*(8000000/4000.0)));
+            }
+            _delay((unsigned long)((3000)*(8000000/4000.0)));
+            PORTBbits.RB7 = 1;
+            PORTBbits.RB6 = 0;
+            _delay((unsigned long)((13)*(8000000/4000.0)));
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
         }
 
+        else{
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
 
 
         if (i == 1){
@@ -2965,7 +2985,7 @@ void main(void) {
             PIR1bits.TXIF = 0;
             i = 1;
         }
-# 216 "main.c"
+# 258 "main.c"
         _delay((unsigned long)((5250)*(8000000/4000.0)));
 
     }
@@ -2996,7 +3016,7 @@ void setup(void){
     PORTE = 0b00000000;
 
     TRISCbits.TRISC6 = 0;
-# 256 "main.c"
+# 298 "main.c"
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.SSPIE = 0;

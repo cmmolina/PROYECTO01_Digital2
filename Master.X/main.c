@@ -50,7 +50,7 @@
 //******************************************************************************
 unsigned int proximidad;
 unsigned int espacios;
-unsigned int espacios_comp;
+unsigned int espacios_comp=3;
 unsigned int temperatura;
 unsigned int cont;
 unsigned int flag = 0;
@@ -170,6 +170,7 @@ void main(void) {
         Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
         
+        /*
         //Apertura de la talanquera 
         if (proximidad == 1 && (espacios>0) && (flag != 1) ){
             PORTBbits.RB7 = 1;
@@ -189,9 +190,50 @@ void main(void) {
             PORTBbits.RB6 = 0;
             flag = 0;
         }
+        */
+        
+        if (proximidad == 1 && espacios>0){
+            __delay_ms(250);
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 1;
+            __delay_ms(13);
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+            
+            while (proximidad){
+                I2C_Master_Start();
+                I2C_Master_Write(0x51);
+                proximidad = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                __delay_ms(200);
+                
+                I2C_Master_Start();
+                I2C_Master_Write(0x101);
+                espacios = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                __delay_ms(250);
+        
+        
+                I2C_Master_Start();
+                I2C_Master_Write(0x111);
+                temperatura = I2C_Master_Read(0);
+                I2C_Master_Stop();
+                __delay_ms(250);
+            }
+            __delay_ms(3000);
+            PORTBbits.RB7 = 1;
+            PORTBbits.RB6 = 0;
+            __delay_ms(13);
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
+        
+        else{
+            PORTBbits.RB7 = 0;
+            PORTBbits.RB6 = 0;
+        }
         
         //Envío de Información al ESP32
-        
         if (i == 1){
             TXREG = espacios;             // Enviamos la información
             PIR1bits.TXIF = 0;              // Apagamos la bandera 

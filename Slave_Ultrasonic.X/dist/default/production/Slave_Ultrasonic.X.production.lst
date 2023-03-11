@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Sun Mar 05 02:09:53 2023
+                                                                                               Thu Mar 09 15:01:09 2023
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	16F887
@@ -1151,7 +1151,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1136     037F  00B4               	movwf	_duration
   1137     0380                     i1l1347:
   1138                           
-  1139                           ;main.c: 179:     distance_cm = duration/58.8;
+  1139                           ;main.c: 179:     distance_cm = (duration/58.8);
   1140     0380  3042               	movlw	66
   1141     0381  00F3               	movwf	___fldiv@a+3
   1142     0382  306B               	movlw	107
@@ -1181,25 +1181,25 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1166     039E  00B8               	movwf	_distance_cm
   1167     039F                     i1l1349:
   1168                           
-  1169                           ;main.c: 181:     if (distance_cm < 5){
-  1170     039F  083B               	movf	_distance_cm+3,w
+  1169                           ;main.c: 182:     if (distance_cm <= 14){
+  1170     039F  3041               	movlw	65
   1171     03A0  00F3               	movwf	___flge@ff1+3
-  1172     03A1  083A               	movf	_distance_cm+2,w
+  1172     03A1  3060               	movlw	96
   1173     03A2  00F2               	movwf	___flge@ff1+2
-  1174     03A3  0839               	movf	_distance_cm+1,w
+  1174     03A3  3000               	movlw	0
   1175     03A4  00F1               	movwf	___flge@ff1+1
-  1176     03A5  0838               	movf	_distance_cm,w
+  1176     03A5  3000               	movlw	0
   1177     03A6  00F0               	movwf	___flge@ff1
-  1178     03A7  3040               	movlw	64
+  1178     03A7  083B               	movf	_distance_cm+3,w
   1179     03A8  00F7               	movwf	___flge@ff2+3
-  1180     03A9  30A0               	movlw	160
+  1180     03A9  083A               	movf	_distance_cm+2,w
   1181     03AA  00F6               	movwf	___flge@ff2+2
-  1182     03AB  3000               	movlw	0
+  1182     03AB  0839               	movf	_distance_cm+1,w
   1183     03AC  00F5               	movwf	___flge@ff2+1
-  1184     03AD  3000               	movlw	0
+  1184     03AD  0838               	movf	_distance_cm,w
   1185     03AE  00F4               	movwf	___flge@ff2
   1186     03AF  120A  118A  22B5  120A  118A  	fcall	___flge
-  1187     03B4  1803               	btfsc	3,0
+  1187     03B4  1C03               	btfss	3,0
   1188     03B5  2BB7               	goto	u121_21
   1189     03B6  2BB8               	goto	u121_20
   1190     03B7                     u121_21:
@@ -1207,7 +1207,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1192     03B8                     u121_20:
   1193     03B8                     i1l1351:
   1194                           
-  1195                           ;main.c: 182:         proximity = 1;
+  1195                           ;main.c: 183:         proximity = 1;
   1196     03B8  3001               	movlw	1
   1197     03B9  1283               	bcf	3,5	;RP0=0, select bank0
   1198     03BA  1303               	bcf	3,6	;RP1=0, select bank0
@@ -1215,18 +1215,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1200     03BC  3000               	movlw	0
   1201     03BD  00BD               	movwf	_proximity+1
   1202                           
-  1203                           ;main.c: 183:     }
+  1203                           ;main.c: 184:     }
   1204     03BE  2BC3               	goto	i1l1355
   1205     03BF                     i1l1353:
   1206                           
-  1207                           ;main.c: 185:         proximity = 0;
+  1207                           ;main.c: 186:         proximity = 0;
   1208     03BF  1283               	bcf	3,5	;RP0=0, select bank0
   1209     03C0  1303               	bcf	3,6	;RP1=0, select bank0
   1210     03C1  01BC               	clrf	_proximity
   1211     03C2  01BD               	clrf	_proximity+1
   1212     03C3                     i1l1355:
   1213                           
-  1214                           ;main.c: 188:     _delay((unsigned long)((100)*(1000000/4000.0)));
+  1214                           ;main.c: 189:     _delay((unsigned long)((100)*(1000000/4000.0)));
   1215     03C3  3021               	movlw	33
   1216     03C4  1283               	bcf	3,5	;RP0=0, select bank0
   1217     03C5  1303               	bcf	3,6	;RP1=0, select bank0
@@ -2611,7 +2611,7 @@ DATA                 0      0      2D      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Sun Mar 05 02:09:53 2023
+Symbol Table                                                                                   Thu Mar 09 15:01:09 2023
 
            ___fldiv@aexp 002C             ___fldiv@bexp 002B                        _z 003E  
            ___fldiv@sign 0024              _SSPSTATbits 0094                       l80 0488  

@@ -176,9 +176,10 @@ void readUpdate(void){
     T1CONbits.TMR1ON = 0;
     
     duration = TMR1;
-    distance_cm = duration/58.8;
+    distance_cm = (duration/58.8);
+    //distance_cm = duration*(0.034)/2;
     
-    if (distance_cm < 5){
+    if (distance_cm <= 14){
         proximity = 1;
     }
     else{

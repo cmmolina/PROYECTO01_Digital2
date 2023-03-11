@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+$C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 10 10 3 2 1
@@ -75,24 +75,24 @@ STRING 48C-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Slave_Ultrasonic.X.production.o
-13 cinit CODE >653:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-13 cinit CODE >656:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-13 cinit CODE >676:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-14 cinit CODE >677:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-15 cinit CODE >678:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-16 cinit CODE >679:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-17 cinit CODE >680:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-18 cinit CODE >681:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-19 cinit CODE >682:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-1A cinit CODE >683:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-1B cinit CODE >684:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-1C cinit CODE >685:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-1D cinit CODE >686:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-1E cinit CODE >687:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-1F cinit CODE >688:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-20 cinit CODE >694:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-20 cinit CODE >696:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
-21 cinit CODE >697:C:\Users\carlo\AppData\Local\Temp\xcAs9nc.s
+13 cinit CODE >653:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+13 cinit CODE >656:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+13 cinit CODE >676:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+14 cinit CODE >677:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+15 cinit CODE >678:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+16 cinit CODE >679:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+17 cinit CODE >680:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+18 cinit CODE >681:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+19 cinit CODE >682:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+1A cinit CODE >683:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+1B cinit CODE >684:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+1C cinit CODE >685:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+1D cinit CODE >686:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+1E cinit CODE >687:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+1F cinit CODE >688:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+20 cinit CODE >694:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+20 cinit CODE >696:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
+21 cinit CODE >697:C:\Users\carlo\AppData\Local\Temp\xcAsjp0.s
 4 intentry CODE >56:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 24 text7 CODE >8:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcdiv.c
 24 text7 CODE >26:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\sprcdiv.c
@@ -292,12 +292,12 @@ FC text7 CODE >112:C:\Program Files\Microchip\xc8\v2.40\pic\sources\c90\common\s
 369 text4 CODE >176:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 36A text4 CODE >178:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 380 text4 CODE >179:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
-39F text4 CODE >181:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
-3B8 text4 CODE >182:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
-3BE text4 CODE >183:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
-3BF text4 CODE >185:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
-3C3 text4 CODE >188:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
-3CE text4 CODE >189:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+39F text4 CODE >182:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+3B8 text4 CODE >183:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+3BE text4 CODE >184:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+3BF text4 CODE >186:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+3C3 text4 CODE >189:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
+3CE text4 CODE >190:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 3CF text3 CODE >56:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 3CF text3 CODE >59:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
 3D3 text3 CODE >61:C:\Users\carlo\OneDrive\Documents\Universidad del Valle\3er Año\1er Ciclo\Electrónica Digital 2\PROYECTO01\Slave_Ultrasonic.X\main.c
@@ -392,17 +392,17 @@ _T1CONbits 10 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+___sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 _main 906 0 CODE 0 maintext dist/default/production\Slave_Ultrasonic.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
-start 20 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+start 20 0 CODE 0 init C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -415,8 +415,8 @@ ___fldiv@aexp 2C 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Ultrasonic.
 ___fldiv@bexp 2B 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Ultrasonic.X.production.o
 ___fldiv@sign 24 0 BANK0 1 cstackBANK0 dist/default/production\Slave_Ultrasonic.X.production.o
 __end_of___fldiv 3FA 0 CODE 0 text7 dist/default/production\Slave_Ultrasonic.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
-___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+___stackhi 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
+___stacklo 0 0 ABS 0 - C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 _I2C_Slave_Init 8CE 0 CODE 0 text2 dist/default/production\Slave_Ultrasonic.X.production.o
 ___fldiv@a 70 0 COMMON 1 cstackCOMMON dist/default/production\Slave_Ultrasonic.X.production.o
 ___fldiv@b 74 0 COMMON 1 cstackCOMMON dist/default/production\Slave_Ultrasonic.X.production.o
@@ -427,7 +427,7 @@ _SSPADD 93 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
 _proximity 3C 0 BANK0 1 bssBANK0 dist/default/production\Slave_Ultrasonic.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+___int_sp 0 0 STACK 2 stack C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -480,7 +480,7 @@ ___xxtofl 3FA 0 CODE 0 text5 dist/default/production\Slave_Ultrasonic.X.producti
 __end_of_isr 86A 0 CODE 0 text3 dist/default/production\Slave_Ultrasonic.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 _readUpdate 6AE 0 CODE 0 text4 dist/default/production\Slave_Ultrasonic.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAs9nc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\carlo\AppData\Local\Temp\xcAsjp0.o
 __end_of___xxtofl 56A 0 CODE 0 text5 dist/default/production\Slave_Ultrasonic.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Slave_Ultrasonic.X.production.o
