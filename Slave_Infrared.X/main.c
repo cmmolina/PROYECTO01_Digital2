@@ -11,7 +11,7 @@
 //*****************************************************************************
 
 // CONFIG1
-#pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN)
+#pragma config FOSC = INTRC_NOCLKOUT // Oscillator Selection bits (RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
@@ -82,8 +82,8 @@ void __interrupt() isr (void){
         else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             SSPSTATbits.BF = 0;
-            LotReading();
-            SSPBUF = lots;
+            LotReading();               // Actualizamos dato de número de espacios
+            SSPBUF = lots;              // Enviamos el número de espacios
             SSPCONbits.CKP = 1;
             __delay_us(250);
             while(SSPSTATbits.BF);
@@ -142,18 +142,12 @@ void setup(void){
     PIR1bits.ADIF = 0;              // Flag de ADC en 0
     INTCONbits.RBIF = 0;            // Flag de Interrupciones del Puerto B en 0
     INTCONbits.T0IF = 0;            // Flag de TMR0 en 0
-    
-    //Configuración del Puerto B 
-           //76543210
-    //IOCB = 0b00000111;              // Pines de Puerto B con Interrupción
-    //OPTION_REGbits.nRBPU = 0;       // Pull-Up/Pull-Down
-    //INTCONbits.RBIE = 1;            // Se habilitan las interrupciones del Puerto B
          
     //Configuración del Oscilador
     OSCCONbits.IRCF = 0b111;        // 8MHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
     
-    I2C_Slave_Init(0x100);           // Configuramos la dirección del esclavo
+    I2C_Slave_Init(0x100);          // Configuramos la dirección del esclavo
 }
 
 void LotReading(void){
@@ -179,9 +173,9 @@ void LotReading(void){
         number3 = 0;
     }
     
-    else{  // Espacio 3 Libre
+    else{                          // Espacio 3 Libre
         number3 = 1; 
     }
     
-    lots = (number1+number2+number3);
+    lots = (number1+number2+number3);    // Actualizamos el número de espacios
 }

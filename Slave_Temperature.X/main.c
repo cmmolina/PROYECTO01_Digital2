@@ -78,9 +78,9 @@ void __interrupt() isr (void){
         else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             SSPSTATbits.BF = 0;
-            readTemp();
-            SSPBUF = temperature;
-            SSPCONbits.CKP = 1;
+            readTemp();                 // Actualizamos datos de la temperatura
+            SSPBUF = temperature;       // Mandamos la temperatura
+            SSPCONbits.CKP = 1; 
             __delay_us(250);
             while(SSPSTATbits.BF);
         }  
@@ -157,16 +157,13 @@ void readTemp(void){
     check = DHT11_Response();
     
     if(check == 1){
-        humedad = DHT11_Read();
-        humedad_dec = DHT11_Read();
-        temperatura = DHT11_Read();
-        temperatura_dec = DHT11_Read();
-        paridad = DHT11_Read();
-        T1CONbits.TMR1ON = 0;       // Apagamos el TMR1
+        humedad = DHT11_Read();         // Leemos los datos de humedad
+        humedad_dec = DHT11_Read();     // Leemos los datos decimales de humedad
+        temperatura = DHT11_Read();     // Leemos los datos de temperatura
+        temperatura_dec = DHT11_Read(); // Leemos los datos decimales de la temperatura
+        paridad = DHT11_Read();         // Leemos el dato de paridad
+        T1CONbits.TMR1ON = 0;           // Apagamos el TMR1
     }
-       
-    //temperature = (48 + ((temperatura/10)%10));
-    //temperature = temperatura;
-    temperature = ((float)temperatura+((float)temperatura_dec/10));
-    //temperature = (float) (DHT11_Join_Data(temperatura, temperatura_dec)/10.0f);
+     
+    temperature = ((float)temperatura+((float)temperatura_dec/10)); // Juntamos el dato de temperatura y temperatura_dec
 }

@@ -1,9 +1,5 @@
 /* 
- * File: LCD.c  
- * Se utilizó y se adaptaron las librerías de Ligo George 
- * de la página www.electrosome.com
- * Enlace: https//electrosome.com/lcd-pic-mplab-xc8/
- * Revision history: 
+ * File:   LCD.c
  */
 
 #include "IIC.h"

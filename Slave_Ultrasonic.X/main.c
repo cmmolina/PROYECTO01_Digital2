@@ -116,7 +116,7 @@ void setup(void){
             //76543210
     TRISA = 0b00000000;             //
     TRISB = 0b00000000;             // 
-    //TRISC = 0b00000000;             //
+    //TRISC = 0b00000000;           //
     TRISD = 0b00000010;             // RD1 como input
     TRISE = 0b00000000;             // 
     
@@ -162,27 +162,27 @@ void readUpdate(void){
     PORTDbits.RD0 = 0;
     
     TMR1 = 0;
-        
-    while (!PORTDbits.RD1){
+         
+    while (!PORTDbits.RD1){         
         ;
     }
     
     T1CONbits.TMR1ON = 1;           // Inicializamos el TMR1
     
     while (PORTDbits.RD1){
-        ;
+        ;                           // Dejamos que el tiempo en el TMR1 siga corriendo hasta que la onda regrese al módulo ultrasónico
     }
     
-    T1CONbits.TMR1ON = 0;
+    T1CONbits.TMR1ON = 0;           // Paramos el TMR1
     
-    duration = TMR1;
-    distance_cm = (duration/58.8);
+    duration = TMR1;                // Guardamos el tiempo elapsado del TMR1
+    distance_cm = (duration/58.8);  // Encontramos la distance al dividir el tiempo por la velocidad a la que viajan las ondas
     //distance_cm = duration*(0.034)/2;
     
-    if (distance_cm <= 14){
+    if (distance_cm <= 14){         // SÍ se detectó la presencia de un carro
         proximity = 1;
     }
-    else{
+    else{                           // NO se detectó la presencia de un carro
         proximity = 0;
     }
     

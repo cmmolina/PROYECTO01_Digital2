@@ -124,20 +124,23 @@ void main(void) {
     Lcd_Init();
     Lcd_Clear();
 
-    while(1){  
+    while(1){ 
+        
+        //Obtenemos datos del sensor ultrasónico
         I2C_Master_Start();
         I2C_Master_Write(0x51);
         proximidad = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(250);
-          
+        
+        //Obtenemos datos de los sensores infrarrojos
         I2C_Master_Start();
         I2C_Master_Write(0x101);
         espacios = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(250);
         
-        
+        //Obtenemos datos del sensor de temperatura
         I2C_Master_Start();
         I2C_Master_Write(0x111);
         temperatura = I2C_Master_Read(0);
@@ -163,35 +166,14 @@ void main(void) {
         // Desplegamos Valor de Temperatura
         tens = (temperatura/10)%10;
         ones = temperatura%10; 
-        
         Lcd_Set_Cursor(2,6);
         Lcd_Write_Char(tens+48);
         Lcd_Write_Char(ones+48);
         Lcd_Write_Char(0xDF);
         Lcd_Write_String("C");
         
-        /*
-        //Apertura de la talanquera 
-        if (proximidad == 1 && (espacios>0) && (flag != 1) ){
-            PORTBbits.RB7 = 1;
-            PORTBbits.RB6 = 0;
-            __delay_ms(100);
-            PORTBbits.RB7 = 0;
-            PORTBbits.RB6 = 0;
-            espacios_comp = espacios; 
-            flag = 1;
-        }
         
-        if (proximidad == 0 && (espacios != espacios_comp)){
-            PORTBbits.RB7 = 0;
-            PORTBbits.RB6 = 1;
-            __delay_ms(100);
-            PORTBbits.RB7 = 0;
-            PORTBbits.RB6 = 0;
-            flag = 0;
-        }
-        */
-        
+        // Elevamos la talanquera si hay un carro en la entrada del parqueo
         if (proximidad == 1 && espacios>0){
             __delay_ms(250);
             PORTBbits.RB7 = 0;
@@ -200,6 +182,7 @@ void main(void) {
             PORTBbits.RB7 = 0;
             PORTBbits.RB6 = 0;
             
+            // Mantenemos la talanquera abierta
             while (proximidad){
                 I2C_Master_Start();
                 I2C_Master_Write(0x51);
@@ -220,6 +203,8 @@ void main(void) {
                 I2C_Master_Stop();
                 __delay_ms(250);
             }
+            
+            // Cerramos la talanquera una vez pase el carro
             __delay_ms(3000);
             PORTBbits.RB7 = 1;
             PORTBbits.RB6 = 0;
@@ -233,15 +218,14 @@ void main(void) {
             PORTBbits.RB6 = 0;
         }
         
-        //Envío de Información al ESP32
+        //Envío de Información al ESP32 mediante UART
         if (i == 1){
-            TXREG = espacios;             // Enviamos la información
+            TXREG = espacios;               // Enviamos la información
             PIR1bits.TXIF = 0;              // Apagamos la bandera 
             i = 2;
         }
-        
         else if (i == 2){
-            TXREG = temperatura;             // Enviamos la información
+            TXREG = temperatura;            // Enviamos la información
             PIR1bits.TXIF = 0;              // Apagamos la bandera 
             i = 1;
         }
@@ -307,8 +291,8 @@ void setup(void){
     INTCONbits.T0IF = 0;            // Flag de TMR0 en 0
     
     //Configuración del Oscilador
-    OSCCONbits.IRCF = 0b111;        // 4MHz
-    //OSCCONbits.IRCF = 0b011;        // 500kHz
+    OSCCONbits.IRCF = 0b111;        // 8MHz
+    //OSCCONbits.IRCF = 0b011;      // 500kHz
     OSCCONbits.SCS = 1;             // Oscilador Interno
     
     
@@ -319,7 +303,6 @@ void setup(void){
 void initUART(void){
     
     SPBRG = 12;                     // Baud rate (8MHz/9600)
-    //SPBRG = 35; 
     TXSTAbits.SYNC = 0;             // Asíncrono 
     RCSTAbits.SPEN = 1;             // Se habilita el módulo UART
     TXSTAbits.TXEN = 1;             /* Transmisión habilitada; TXIF se enciende
@@ -328,5 +311,4 @@ void initUART(void){
     PIR1bits.TXIF = 0;              // Apagamos la bandera de transmisión
     
     RCSTAbits.CREN = 1;             // Habilitamos la recepción
-    //BAUDCTLbits.BRG16 = 1;
 }
